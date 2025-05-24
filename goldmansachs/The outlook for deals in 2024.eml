@@ -1,0 +1,1890 @@
+Delivered-To: godnamu1213@gmail.com
+Received: by 2002:a05:6a10:4fa6:b0:523:49a4:fe48 with SMTP id ul38csp186822pxb;
+        Fri, 24 Nov 2023 03:35:19 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHd79A9DJ7yfm4Vb+27q1AeEUCRPl5HSlrJkgBmh5VOzE8zWy1xk/cLT1cPMBlei37XUe7q
+X-Received: by 2002:a5b:78f:0:b0:d81:504f:f879 with SMTP id b15-20020a5b078f000000b00d81504ff879mr1816770ybq.28.1700825719053;
+        Fri, 24 Nov 2023 03:35:19 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1700825719; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fvO4OE2pmyNdxav73Dc15Jvt2GuWSHS5dt25WwD55Dh8Zm++MmZgECowiS6ZZ2q3Ms
+         4LKdBU3ozolpHE4RRbe8CIm1qx2FQqrYBz/4y0Bd102GBOzpm4+4Ek+/FVTChInbpFM8
+         jJs4V8KXFkT7jm2uh53PDgQR2OPqp4hjntrbwtGLQTX1X4xqpQvs4sIYxNoxejlKP8f5
+         nZqbNebKQIIJjqnITGYV5Ly3wUzMXRJ6eT0CXS63mfQP93e02+KQnLRkkRadAU/+hyKc
+         4q+Kzu6a57BbyuqXupfwMhK1Oj3pzMG3s5G7NCAVQhgLDrjR0bANBpqgKEKazeDduj3p
+         ciQw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:mime-version:reply-to:to:date:subject:from
+         :dkim-signature;
+        bh=KR2B7UJ5BSdrtaGOwds4JFh9FMkjSSSU3wp9sY49EuE=;
+        fh=cUrzeEqz1tKcnDnZIT8KfI8E0MqCguVJot303Vjd3o4=;
+        b=mEL6LRPp79shvhDqD48POSg9XRCme1QwHCfqOjE9xC5t/OfSVHfWWbzHJOFv2Cs6SX
+         xL+5dZYCxY8J9hrifeVRBq9cc767A6ilKdHiDkjg/FGnP2PUiQP/EfOcXSJbX14J9JQW
+         ROrqYStiCu0lpNbBPY/QdwcjXln3ajgFSacK1dhhKznd+Utt+5asDHqmAB01NAvZwNqq
+         PHWRhSn41T9YBclX9zUOjSMdn5KR/XO3Ugc8TDJ8zJax7/UGLBg6Tupr2+e5USfxp5Yg
+         DFV2Jehr0gLCW4AvkqMBrYKPCFKvtGtyibDvk0+F+vhDdZ27L1aoCtTQsmWmVgG0n3j5
+         glwg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gs.com header.s=201802 header.b=Kb9Za7o5;
+       spf=pass (google.com: domain of goldmansemail@email.gsam.gs.com designates 207.17.46.167 as permitted sender) smtp.mailfrom=goldmansemail@email.gsam.gs.com;
+       dmarc=pass (p=NONE sp=REJECT dis=NONE) header.from=gs.com
+Return-Path: <goldmansemail@email.gsam.gs.com>
+Received: from mxe02.gs.com (mxe02.gs.com. [207.17.46.167])
+        by mx.google.com with ESMTPS id fe5-20020a0562140b8500b0067a1d187709si410024qvb.575.2023.11.24.03.35.18
+        for <godnamu1213@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 24 Nov 2023 03:35:19 -0800 (PST)
+Received-SPF: pass (google.com: domain of goldmansemail@email.gsam.gs.com designates 207.17.46.167 as permitted sender) client-ip=207.17.46.167;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gs.com header.s=201802 header.b=Kb9Za7o5;
+       spf=pass (google.com: domain of goldmansemail@email.gsam.gs.com designates 207.17.46.167 as permitted sender) smtp.mailfrom=goldmansemail@email.gsam.gs.com;
+       dmarc=pass (p=NONE sp=REJECT dis=NONE) header.from=gs.com
+Received: from pps.filterd (gsppabdp01sd.idz.gs.com [127.0.0.1])
+	by gsppabdp01sd.idz.gs.com (8.16.1.2/8.16.1.2) with SMTP id 3AOBUOFs006843
+	for <godnamu1213@gmail.com>; Fri, 24 Nov 2023 06:35:18 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gs.com; h=from : subject : date :
+ to : reply-to : mime-version : message-id : content-type; s=201802;
+ bh=KR2B7UJ5BSdrtaGOwds4JFh9FMkjSSSU3wp9sY49EuE=;
+ b=Kb9Za7o56if3XJDY9Tn+O5KspimPr0dEdLDAPS4RSSYQn17dsvm4JvARMoe0TiaoVwm1
+ 5Jbjo43HmRgtOskr/qQDNNjHj2aqBHmZ9CElb3Mm1pE0sZrBQfKOYcA4UBJGD+jVlUa0
+ yUc8dwBVwv2zTWliB05rJHmTI2te4k7vyboFFq5iZHpTr1WbZ3SlRLUBwY8aHz2Fm18G
+ 6wDifvOo4F4aFsqO+uH90qBrjBZxkRvZP1XZ0s//mYqymq8UjEGQmgyCck1UJ2SMlrZZ
+ S+gnDMchGkRdTHmgV2J/vR9ZV/c6fiLxaRGdEhVu1D23YqfpooGADj/EZaomP+YL6H0B vA== 
+Received: from gsppabdp02nd.inz.gs.com ([10.204.43.240])
+	by gsppabdp01sd.idz.gs.com with ESMTP id 3ueqvwyp3d-1
+	for <godnamu1213@gmail.com>; Fri, 24 Nov 2023 06:35:18 -0500
+Received: from pps.filterd (gsppabdp02nd.inz.gs.com [127.0.0.1])
+	by gsppabdp02nd.inz.gs.com (8.16.1.2/8.16.1.2) with SMTP id 3AOBSO1w014977
+	for <godnamu1213@gmail.com>; Fri, 24 Nov 2023 06:35:18 -0500
+Received: from amx-e-123226-006.dc.gs.com (amx-e-123226-006.dc.gs.com [10.57.82.109])
+	by gsppabdp02nd.inz.gs.com with ESMTP id 3uetmms0ph-1
+	for <godnamu1213@gmail.com>; Fri, 24 Nov 2023 06:35:18 -0500
+Received: from acprod.gs.com (d403676-036.dc.gs.com [10.124.66.236])
+	by amx-e-123226-006.dc.gs.com (Sentrion-MTA-4.5.3/Sentrion-MTA-4.5.3) with ESMTP id 3AOBZ5u6003925
+	for <godnamu1213@gmail.com>; Fri, 24 Nov 2023 06:35:17 -0500
+From: "Briefings from Goldman Sachs" <briefings@gs.com>
+Subject: The outlook for deals in 2024
+Date: Fri, 24 Nov 2023 06:35:15 -0500
+To: <godnamu1213@gmail.com>
+Reply-To: "Briefings from Goldman Sachs" <briefings@gs.com>
+MIME-Version: 1.0
+X-mailer: nlserver, Build 6.7.0
+Message-ID: <NM626B6762F83C38941GSACPROD@email.gsam.gs.com>
+Content-Type: multipart/alternative;
+	charset="windows-1252";
+	boundary="----=_NextPart_207_1FBE2C89.1FBE2C89"
+X-GS-AMX: 1
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.619,18.0.987
+ definitions=2023-11-23_15:2023-11-22,2023-11-23 signatures=0
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.619,18.0.987
+ definitions=2023-11-23_15:2023-11-22,2023-11-23 signatures=0
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_207_1FBE2C89.1FBE2C89
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+How private equity strategies are evolving   
+
+	
+	
+
+	
+	
+	
+
+	
+
+The key takeaways today: 
+
+	- A promising outlook for dealmaking and IPOs in 2024  
+	- Stocks in the US and Japan are expected to rally  
+	- The new private equity playbook for an era of higher-for-longer rates  
+	- Briefings brainteaser: How does the S&P 500 fare in election years? 
+
+Was this newsletter forwarded to you? (  https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660ba6 Sign up now. ) 	
+	
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+What's the outlook for dealmaking, corporate and investor sentiment, and markets? 	
+	
+	
+
+	
+
+Despite a challenging global economy and geopolitical landscape, the outlook for dealmaking, IPOs, and corporate and investor activity is expected to improve in 2024, according to Jim Esposito, Dan Dees, and Ashok Varadhan, the co-heads of Goldman Sachs' Global Banking & Markets business, on   https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660ba7 Goldman Sachs Exchanges . 
+
+For one, the market for IPOs, which started to pick up in recent months, should accelerate in the back half of 2024, especially if the Federal Reserve starts cutting rates next year, says Dees. “When you step back even further, I think the environment for capital raising will be very robust because it has to be in the years ahead,” he says. “We are in the age of innovation, of accelerating innovation. All that innovation needs to be funded.” 
+	
+	
+	
+
+	
+
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660ba8 	
+	
+	
+
+	
+
+	
+
+M&A activity should also improve. While private equity's dealmaking velocity is expected to slow with the rise in interest rates, companies are starting to step up their strategic activity, says Esposito. “I think corporates in some places were getting priced out of the market, and I do expect to see corporates starting to step in and fill the void,” he says. “We do expect to see a reasonable pickup in dealmaking activity, especially now that we seem to be through the other side of this interest rate hiking cycle.” 
+
+However, what's different about the current market cycle is the long-term debt dynamic, says Varadhan. Long-term yields have risen at a time when some buyers for that debt are pulling back.  “It's hard to see long-term rates coming down meaningfully. Our base case on the trading desk is we expect a more normalized yield curve, a steeper yield curve, but really more with normalized and lower rates in the front end and not a lot of relief in the back end,” says Varadhan. 	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+
+US and Japanese stocks are expected to rally in 2024 	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660ba9 	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660baa US stocks are forecast by Goldman Sachs Research to have a modest return next year , as above-consensus economic growth is partly offset by high valuations.   
+
+	- The S&P 500 index is expected to rise to 4,700 by the end of 2024, representing a price gain of about 5% and a total return of around 6% including dividends. Our economists'   https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bab forecast for US GDP growth  in 2024 is already reflected in stock prices.   
+	- Cash, with a 5% risk-free return, remains a competitive alternative to stocks. Three-month Treasury bills yield around 5.5%, similar to the earnings yield of the S&P 500 index.   
+	- Our analysts think there may be investment opportunities beneath the surface. "Quality" stocks — with higher profitability, stronger balance sheets, and stable sales and earnings growth — could outperform in an environment of persistent investor concern about an impending recession. Growth stocks, which have a higher expected growth rate than the rest of the market, may be attractive given stable economic growth and interest rates. Lagging cyclical stocks that are sensitive to a downturn may rally, given our economists' prediction that recession risk is lower than feared.   
+	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bac 	
+	
+	
+
+	
+
+While US stocks may struggle to beat cash, Goldman Sachs Research forecasts that   https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bad the  Japanese equity market will have a transformational year in 2024 , boosted by solid global economic growth and stock market reforms.   
+
+	- The  TOPIX is  projected to rise about 13% to 2,650  by the end of  2024.   Japanese companies' earnings momentum also remains strong, Goldman Sachs Research strategists Bruce Kirk and Kazunori Tatebe write in the team's report.    
+	- They forecast 12% growth in TOPIX earnings per share in 2023, 8% in fiscal year 2024, and 7% in fiscal year 2025.   
+	- A key part of our analysts' forecast is the Tokyo Stock Exchange's corporate governance reforms, which they say “have been a game changer for the Japanese equities market.”   
+	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+
+How private equity strategies are changing amid higher-for-longer rates 	
+	
+	
+
+	
+
+As changes in everything from technology and interest rates to sustainability concerns ripple through the corporate world, private equity enjoys some advantages over public-market investing when it comes to large-scale transformation for the modern economy. But   https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bae private equity's playbook will likely be quite different than in the past, according to Goldman Sachs Asset Management .   
+  
+
+	- Private equity general partners have adapted over the past 40 years to emphasize different return drivers,   https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660baf write James Gelfer and Juliana Hadas,  in Portfolio Solutions for Alternatives Capital Markets and Strategy,  in a report . Leverage and financial structuring have become less important, while multiple expansion and operational factors have gained prominence.   
+	- The next era is expected to be defined by slower economic growth, shrinking labor forces, and higher inflation — leaving investors and operators to contend with headwinds to topline real growth, margin compression, and a structurally higher cost of capital.   
+
+	
+	
+	
+
+ https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bb0 	
+	
+	
+
+	
+
+	- For private equity, operational value-creation levers — revenue growth and margin expansion — are poised to become the main determinants of success in the new regime. While M&A may be more challenging, organic growth may be more important. Margin enhancement is likely to rely on optimizing processes, enhancing supply chains, and rationalizing the cost structure.   
+	- New technology tools could be especially valuable for businesses and industries that are performing well but below potential. But “cautionary tales abound of companies that spent heavily on technology without reaping the full benefits due to organizational frictions,” Gelfer and Hadas point out.   
+
+	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+Briefings Brainteaser: Election-year returns 	
+	
+	
+
+	
+
+Since 1976, the S&P 500 Index of US stocks has registered an average annual return of 11%. How much has the S&P 500 returned, on average, in the 12 presidential-election years during that period?   
+
+A) 4% 
+B) 8% 
+C) 12% 
+D) 15% 
+
+ https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bb1 Check the answer here. 	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+
+Goldman Sachs in the news 	
+	
+	
+
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bb2 CNBC   November 12 	
+ https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bb3 Korea, Taiwan, and Vietnam will continue to benefit from tech exports pickup in 2024: Goldman Sachs (4:02) 	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+ https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bb4  https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bb5 		
+	
+	
+	
+
+	
+	
+	
+
+	
+
+Some of the images used in this newsletter are sourced via Getty Images. The data provided in this newsletter is for information purposes only and should not be construed as investment or tax advice nor as a recommendation to buy, sell, or hold any particular security. Goldman Sachs believes the data in this newsletter is accurate, but does not verify its accuracy independently and does not warrant or guarantee that it is accurate or complete. Goldman Sachs has no obligation to provide any updates or changes to the data. No investment decisions should be made using this data. Past performance is not indicative of future performance. 
+
+To the extent this newsletter includes material from Goldman Sachs Global Banking & Markets, please  https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bb6 click here  for information relating to Goldman Sachs Global Banking & Markets material and your reliance on it. The Investment Strategy Group, part of the Asset & Wealth Management business (“AWM”) of GS, focuses on asset allocation strategy formation and market analysis for GS Wealth Management. Any information that references ISG, including their model portfolios, represents the views of ISG, is not financial research and is not a product of GS Global Investment Research and may vary significantly from views expressed by individual portfolio management teams within AWM, or other groups at GS. 
+
+To the extent this newsletter includes material from Goldman Sachs Asset Management, please  https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bb7 click here  for additional disclosures. 
+
+ https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bb8&e=cDE9Q0ZBNzc4NUUtNjg4Ni00QzdBLUFGQTMtMEQxRUIxRDdDODRB&s=sjMHP1_yDE4fiVcDO30Ikfx23n7XngdzpFlcFwK1T0c Click here  to unsubscribe. 
+
+© 2023 Goldman Sachs, All rights reserved. 
+200 West Street, New York, NY 10282, USA 	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bb9 GS.com   |    https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bba Careers Blog   |   https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bbb Privacy and Security   |   https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bbc Terms of Use 	 https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bbd  https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bbe  https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bbf  https://tracking.gs.com/r/?id=t26b6762f,83c38941,65660bc0
+
+------=_NextPart_207_1FBE2C89.1FBE2C89
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+ <html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-micros=
+oft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+ <head>
+ <meta charset=3D"UTF-8">
+ <meta name=3D"x-apple-disable-message-reformatting" />
+ <meta name=3D"format-detection" content=3D"telephone=3Dno"> 
+ <meta name=3D"viewport" content=3D"width=3D750" />
+ <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3D9; IE=3D8; IE=3D7; IE=
+=3DEDGE" />
+ <style type=3D"text/css">@import url("https://fonts.googleapis.com/css=3Ff=
+amily=3D");  td,p,div {overflow-wrap: break-word;word-wrap: break-word;} 
+@media screen and (max-width: 500px) {body {width:100% !important;min-width=
+:0px !important;}div[id=3D"email_container_inner"] {width:100% !important;m=
+in-width:0px !important;}img {max-width:100%; height:auto !important;}.remo=
+veme {display:none !important;}.sp_column_adjustment {width:100% !important=
+;max-width:100% !important; }.fullwidth {width:100% !important; padding-lef=
+t:0px !important; padding-right:0px !important; height:auto !important;}img=
+.fullwidth {width:100% !important; max-width:100%;}.layout_col_half,.layout=
+_col_third,.layout_col_twothirds,.blockme,.sp_layout_column {display:block =
+!important; width:auto !important; padding-left:0px !important; padding-rig=
+ht:0px !important; border-left:none !important; border-right:none !importan=
+t;padding-bottom:15px;}.sp_text_content{box-sizing: border-box;}.sp_layout_=
+column:last-of-type,.blockme:last-of-type {padding-bottom:0px;}.inlineBlock=
+Me {display:inline-block !important;}.centerme {text-align:center !importan=
+t;}.centerme img {float:none !important; display:inline-block !important;}.=
+padme {padding:10px !important;}.sp_button_cont {float:none !important; dis=
+play:inline-block !important;}} 
+@font-face { font-family: "Basis"; src: url('https://cdn.gs.com/fonts/basis=
+/v1/basis-regular.woff') format('woff'), url('https://cdn.gs.com/fonts/basi=
+s/v1/basis-regular.woff2') format('woff2'); font-weight: normal; font-style=
+: normal; font-display: swap; } @font-face { font-family: "Basis"; src: url=
+('https://cdn.gs.com/fonts/basis/v1/basis-bold.woff') format('woff'), url('=
+https://cdn.gs.com/fonts/basis/v1/basis-bold.woff2') format('woff2'); font-=
+weight: bold; font-style: normal; font-display: swap; } [style*=3D'Basis'] =
+{ font-family: Basis, Arial, sans-serif !important; } body { background-col=
+or:#FFFFFF !important;} a, a:link, a:visited {text-decoration:none; color:#=
+2178C4;} a, a:link, a:visited img {border:none} a:hover, a:active img {bord=
+er:none} p {margin: 1em 0;} a img {border:none;}  img {outline:none; text-d=
+ecoration:none; -ms-interpolation-mode: bicubic;}
+=2EReadMsgBody { width: 100%;} .ExternalClass {width: 100%;} .ExternalClass=
+, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClas=
+s td, .ExternalClass div {line-height:100%;} body {width:100% !important; -=
+webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:=
+0;}  table {border-spacing:0;mso-table-lspace:0pt; mso-table-rspace:0pt;} t=
+able td {border-collapse: collapse;line-height: 1.5em;} table { border-coll=
+apse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; } .yshortcuts a =
+{border-bottom: none !important;} #outlook a {padding:0;}  a[href^=3D"tel"]=
+, a[href^=3D"sms"] {text-decoration: none;color:inherit;pointer-events: non=
+e;cursor: default;} td, p, div{overflow-wrap:normal;word-wrap:normal;-webki=
+t-hyphens:manual;-ms-hyphens: manual;-moz-hyphens: manual;hyphens: manual;}=
+ ul {padding: 0 0 0 15px;list-style-type: square;} ul li {margin-bottom: 15=
+px;}
+=2EgsButtonPrimary:hover td {color: #ffffff !important; background-color: #=
+3B98E2;} .gsButtonPrimary:hover td a {color: #ffffff !important;} .gsButton=
+Secondary:hover td {color: #ffffff !important; background-color: #22263F;} =
+.gsButtonSecondary:hover td a {color: #ffffff !important;}   .gsButtonLight=
+:hover td {color: #22263F !important; background-color: #FFFFFF;} .gsButton=
+Light:hover td a {color: #22263F !important;}   .gsThreeColumn {text-align:=
+ center;font-size: 0; } .gsButton {border-collapse: separate;border-radius:=
+ 3px} .gsButton td {border-radius: 3px} .gsTierTable .gsTierTableWrap {back=
+ground-color: #ffffff;border-radius: 6px;} .gsTierTable .gsTierTableWrap th=
+,.gsTierTable .gsTierTableWrap td {padding: 15px;} .gsTierTable .gsTierTabl=
+eWrap th {background-color: #FAFAFC;font-weight: normal;color: #828599;} .g=
+sTierTable .gsTierTableWrap th:first-child {border-top-left-radius: 6px;}
+=2EgsTierTable .gsTierTableWrap th:last-child {border-top-right-radius: 6px=
+;} .gsTierTable .gsTierTableWrap td {border-top:1px solid #DCDDE5;} @media =
+screen and (max-width:620px) { /* -------- Template Styles -------- */ #gsE=
+mailWrapper {min-width: 0px !important} .gsDesktopOnly { display: none !imp=
+ortant } .gsMobileOnly { height:auto !important; display:block !important; =
+width: auto !important; overflow: visible !important; float: none !importan=
+t; max-height:inherit !important; max-width:inherit !important; line-height=
+: auto !important; margin-top:0px !important; visibility:inherit !important=
+;} .gsMobileOnly img { height:auto !important; display:block !important; wi=
+dth: auto !important; overflow: visible !important; float: none !important;=
+ max-height:inherit !important; max-width:inherit !important; line-height: =
+auto !important; margin-top:0px !important; visibility:inherit !important;}
+img {max-width:100% !important; height:auto !important;} .gsFullWidth {widt=
+h:100% !important; padding-left:0px !important; padding-right:0px !importan=
+t; height:auto !important;float:none !important;} img.gsFullWidth {width:10=
+0% !important; max-width:100% !important;} img.gsThreeQuarterWidth {width:7=
+5% !important; max-width:75% !important;} img.gsHalfWidth {width:50% !impor=
+tant; max-width:50% !important;} img.gsMediaThumb {width:150px !important; =
+max-width:150px !important;} img.gsMediaThumb130 {width:130px !important; m=
+ax-width:130px !important;} .gsDisplayBlock {display:block !important; widt=
+h:100% !important; padding-left:0px !important; padding-right:0px !importan=
+t; border-left:none !important; border-right:none !important; } .gsDisplayB=
+lock:not(:last-of-type){padding-bottom:10px !important;} .gsDisplayBlock.gs=
+RemoveBottomPadding {padding-bottom:0px !important;}
+=2EgsDisplayBlockSpacer {padding-bottom:0px !important;height:30px !importa=
+nt;} .gsDisplayBlock10:not(:last-of-type) {padding-bottom:10px !important;}=
+ .gsDisplayBlock15:not(:last-of-type) {padding-bottom:15px !important;} .gs=
+DisplayBlock25:not(:last-of-type) {padding-bottom:25px !important;} .gsDisp=
+layTable {display: table !important;} .gsAlignCenter {text-align:center !im=
+portant;} .gsRemoveOnMobile {display:none !important} .gsRemoveMaxWidth {ma=
+x-width: inherit !important;} .gsDisplayInlineBlock {display:inline-block !=
+important} .gsDisplayInlineBlock10 {padding-bottom:10px !important;} .gsDis=
+playInlineBlock15 {padding-bottom:15px !important;} .gsDisplayInlineBlock25=
+ {padding-bottom:25px !important;} .gsSidePadding {padding-left:0px !import=
+ant;padding-right:0px !important;} .gsContentWidth {width:100% !important} =
+.gsButton {width:100% !important;} .gsButton td {text-align: center;}
+=2EgsButton td a {text-align: center; display:block; width: 100%;} .gsRemov=
+eBottomPadding {padding-bottom:0px !important;} .gsRemoveTopPadding {paddin=
+g-top:0px !important;} .gsRemoveRightPadding {padding-right:0px !important;=
+} .gsRemoveLeftPadding {padding-left:0px !important;} .gsBodyPadding40, .gs=
+BodyPadding30, .gsBodyPadding20, .gsBodyPadding15, .gsBodyPadding0 {padding=
+-left:20px !important;padding-right:20px !important;} .gsMobilePaddingTop10=
+ {padding-top: 10px !important;} .gsMobilePaddingTop20 {padding-top: 20px !=
+important;} .gsMobilePaddingTop30 {padding-top: 30px !important;} .gsMobile=
+PaddingBottom10 {padding-bottom: 10px !important;} .gsMobilePaddingBottom20=
+ {padding-bottom: 20px !important;} .gsMobilePaddingBottom30 {padding-botto=
+m: 30px !important;} .gsMobilePaddingRight10 {padding-right: 10px !importan=
+t;} .gsMobilePaddingRight20 {padding-right: 20px !important;}
+=2EgsMobilePaddingRight30 {padding-right: 30px !important;} .gsMobilePaddin=
+gLeft10 {padding-left: 10px !important;} .gsMobilePaddingLeft20 {padding-le=
+ft: 20px !important;} .gsMobilePaddingLeft30 {padding-left: 30px !important=
+;} .gsMobilePadding10 {padding: 10px !important;} .gsMobilePadding20 {paddi=
+ng: 20px !important;} .gsMobilePadding30 {padding: 30px !important;} .gsSpa=
+cer20 {height:15px !important;font-size:15px !important;line-height:15px !i=
+mportant;height:15px !important;} .gsSpacer30 {height:20px !important;font-=
+size:20px !important;line-height:20px !important;height:20px !important;} .=
+gsSpacer40 {height:25px !important;font-size:25px !important;line-height:25=
+px !important;height:25px !important;} .gsSpacer60 {height:35px !important;=
+font-size:35px !important;line-height:35px !important;height:35px !importan=
+t;}
+=2EgsSpacer80 {height:50px !important;font-size:50px !important;line-height=
+:50px !important;height:50px !important;} .gsSpacer90 {height:60px !importa=
+nt;font-size:60px !important;line-height:60px !important;height:60px !impor=
+tant;} .gsMobileRemoveBottomLeftRadius {border-bottom-left-radius: 0 !impor=
+tant;} .gsMobileRemoveBottomRightRadius {border-bottom-right-radius: 0 !imp=
+ortant;} .gsMobileRemoveTopLeftRadius {border-top-left-radius: 0 !important=
+;} .gsMobileRemoveTopRightRadius {border-top-right-radius: 0 !important;} .=
+gsMobileAddBottomLeftRadius {border-bottom-left-radius: 4px !important;} .g=
+sMobileAddBottomRightRadius {border-bottom-right-radius: 4px !important;} .=
+gsMobileAddTopLeftRadius {border-top-left-radius: 4px !important;} .gsMobil=
+eAddTopRightRadius {border-top-right-radius: 4px !important;} .gsImgMaxMobi=
+le {max-width: 200px;height: auto;}
+=2EgsTextHeadline {font-size: 26px !important} .gsTextBody {font-size: 18px=
+ !important} .gsTextBodySubText {font-size: 14px !important} } @media (pref=
+ers-color-scheme: dark ) { /* Shows Dark Mode-Only Content, Like Images */ =
+.gsDarkImg { display:block !important; width: auto !important; overflow: vi=
+sible !important; float: none !important; max-height:inherit !important; ma=
+x-width:inherit !important; line-height: auto !important; margin-top:0px !i=
+mportant; visibility:inherit !important; } .gsDarkImg img {height:auto !imp=
+ortant} /* .gsDarkImgInlineBlock { display:inline-block !important; width: =
+auto !important; overflow: visible !important; float: none !important; max-=
+height:inherit !important; max-width:inherit !important; line-height: auto =
+!important; margin-top:0px !important; visibility:inherit !important; } .gs=
+DarkImgInlineBlock img {height:auto !important} */
+/* Hides Light Mode-Only Content, Like Images  .gsLightImg { display:none; =
+display:none !important; } .gsLightImg img { display:none; display:none !im=
+portant; height: 0px !important; width: 0px !important } */ /* Custom Dark =
+Mode Font Colors  .gsTextOnWhiteBg { color: #000000 !important; } .gsDarkMo=
+deBg { background-color: #000000 !important; }  */ } </style>
+ </head>
+ <body style=3D"margin:0px; padding:0px;">
+ <style>@media screen and (max-width:500px){.sp_mobile_text_align_left   .s=
+p_image_container{text-align:left!important}.sp_mobile_text_align_left   .s=
+p_text_title{text-align:left!important}.sp_mobile_text_align_left   .sp_aut=
+hor_details{text-align:left!important}.sp_mobile_text_align_left   .sp_auth=
+or_details   td{text-align:left!important}.sp_mobile_text_align_left   .sp_=
+button_wrapper{text-align:left!important}.sp_mobile_text_align_left   .sp_b=
+utton_wrapper   td{text-align:left!important}.sp_mobile_text_align_left   .=
+sp_text_headline   .sp_text_headline_title{text-align:left!important}.sp_mo=
+bile_text_align_left   .sp_text_headline   .sp_text_headline_desc{text-alig=
+n:left!important}.sp_mobile_text_align_left   .sp_table   table{text-align:=
+left!important}.sp_mobile_text_align_left   .sp_text_description{text-align=
+:left!important}.sp_mobile_text_align_left   .sp_button_wrapper{text-align:=
+left!important}.sp_mobile_text_align_left   .sp_button_wrapper_inner{text-a=
+lign:left!important;float:left!important;display:inline-block!important}.sp=
+_mobile_text_align_center   .sp_image_container{text-align:center!important=
+}.sp_mobile_text_align_center   .sp_text_title{text-align:center!important}=
+.sp_mobile_text_align_center   .sp_author_details{text-align:center!importa=
+nt}.sp_mobile_text_align_center   .sp_author_details   td{text-align:center=
+!important}.sp_mobile_text_align_center   .sp_button_wrapper{text-align:cen=
+ter!important}.sp_mobile_text_align_center   .sp_button_wrapper   td{text-a=
+lign:center!important}.sp_mobile_text_align_center   .sp_text_headline   .s=
+p_text_headline_title{text-align:center!important}.sp_mobile_text_align_cen=
+ter   .sp_text_headline   .sp_text_headline_desc{text-align:center!importan=
+t}.sp_mobile_text_align_center   .sp_table   table{text-align:center!import=
+ant}.sp_mobile_text_align_center   .sp_text_description{text-align:center!i=
+mportant}.sp_mobile_text_align_center   .sp_button_wrapper{text-align:cente=
+r!important;line-height:0px!important}.sp_mobile_text_align_center   .sp_bu=
+tton_wrapper   .sp_button_spacer{line-height:normal!important}.sp_mobile_te=
+xt_align_center   .sp_button_wrapper_inner{text-align:center!important;floa=
+t:none!important;display:inline-block!important;line-height:normal!importan=
+t}.sp_mobile_text_align_right   .sp_image_container{text-align:right!import=
+ant}.sp_mobile_text_align_right   .sp_text_title{text-align:right!important=
+}.sp_mobile_text_align_right   .sp_author_details{text-align:right!importan=
+t}.sp_mobile_text_align_right   .sp_author_details   td{text-align:right!im=
+portant}.sp_mobile_text_align_right   .sp_button_wrapper{text-align:right!i=
+mportant}.sp_mobile_text_align_right   .sp_button_wrapper   td{text-align:r=
+ight!important}.sp_mobile_text_align_right   .sp_text_headline   .sp_text_h=
+eadline_title{text-align:right!important}.sp_mobile_text_align_right   .sp_=
+text_headline   .sp_text_headline_desc{text-align:right!important}.sp_mobil=
+e_text_align_right   .sp_table   table{text-align:right!important}.sp_mobil=
+e_text_align_right   .sp_text_description{text-align:right!important}.sp_mo=
+bile_text_align_right   .sp_button_wrapper{text-align:right!important}.sp_m=
+obile_text_align_right   .sp_button_wrapper_inner{text-align:right!importan=
+t;float:right!important;display:inline-block!important}}@media screen and (=
+max-width:500px){#spe   .sp_text_title{font-size:24px!important}#spe   .sp_=
+text_description{font-size:22px!important}}</style>
+<div class=3D"sp_preheader" style=3D"display:none!important;visibility:hidd=
+en;mso-hide:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;=
+max-width:0px;opacity:0;overflow:hidden">How private equity strategies are =
+evolving <span style=3D"font-size:0px">=C2=A0</span></div><div id=3D"spe"><=
+!--[if gte mso 9]><style> ul.gsFlushList li { text-indent: -1em !important;=
+ Margin: 0 0 0 25px !important; } </style><![endif]--><!--[if (gte mso 9)|(=
+IE)]><style type=3D"text/css"> table { border-collapse: collapse; border-sp=
+acing: 0; } </style><![endif]--><table width=3D"100%" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0"><tbody><tr><td class=3D"gsDarkModeBg" bgcolor=
+=3D"#FFFFFF"><div><div><div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_168072607=
+0 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1174" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  *********************************** ******** START:=
+ Header ************ --><table class=3D"gsContentWidth" width=3D"640" cells=
+pacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center"><tbody><tr><td=
+ class=3D"gsMobilePadding10" style=3D"padding-top:10px;padding-right:20px;p=
+adding-bottom:10px;padding-left:20px" align=3D"center"><table width=3D"100%=
+" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=3D"=
+sp_image_wrapper gsContentWrapper gsImageWrapper" valign=3D"top" align=3D"c=
+enter">
+<div class=3D"gsDesktopOnly"><a href=3D"#" target=3D"_blank" style=3D"color=
+:#186ade;text-decoration:none;font-weight:bold"><img class=3D"gsFullWidth" =
+src=3D"https://assets.storyports.com/pushproject/u/737/images/5116807290.pn=
+g" style=3D"border:none;display:block;width:600px" width=3D"600"></a></div>=
+<!--[if !mso]><! --><div class=3D"gsMobileOnly" style=3D"height:0px;line-he=
+ight:0px;font-size:0px"><a href=3D"#" target=3D"_blank" style=3D"color:#186=
+ade;text-decoration:none;font-weight:bold"><img class=3D"gsFullWidth" src=
+=3D"https://assets.storyports.com/pushproject/u/737/images/6916807290.png" =
+style=3D"border:none;width:1px;display:none;height:1px;overflow:hidden;max-=
+height:0px;max-width:0px;line-height:0px;margin-top:0px;margin-right:0px;ma=
+rgin-bottom:0px;margin-left:0px;visibility:hidden" width=3D"1" height=3D"1"=
+></a></div><!--<![endif]--></td></tr></tbody></table></td></tr></tbody></ta=
+ble><!--  ******** END: Header ************  ******************************=
+***
+--></div></div></div><div class=3D"layout_type_custom_module"><div><div cla=
+ss=3D" type_1658890343 type_custom_module sp_text_align_center" data-additi=
+onal_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-conta=
+iner_width=3D"1367" data-orientation_type=3D"custom_module" data-orientatio=
+n_type_name=3D"" data-align=3D"center"><!--  ******************************=
+******* ******** START: Divider  ************
+--><table class=3D"gsDividerTable" width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gsC=
+ontentWidth" width=3D"640" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ align=3D"center"><tbody><tr><td align=3D"center"><table width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=3D"gsCon=
+tentWrapper gsBodyPadding30" style=3D"padding-top:0;padding-right:30px;padd=
+ing-bottom:0;padding-left:30px;background-color:#ffffff;font-size:0px;line-=
+height:0px;height:1px"><hr style=3D"border:none;height:1px;background:#d0d0=
+d0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;margin-top=
+:0;margin-right:0;margin-bottom:0;margin-left:0;outline:none"></td></tr></t=
+body></table></td></tr></tbody></table></td></tr></tbody></table><!-- *****=
+*** End: Divider  ********* ******************************** --></div></div=
+></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1367" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td clas=
+s=3D"gsSpacer20" style=3D"height:20px;height:20px;font-size:20px;line-heigh=
+t:20px" height=3D"20" align=3D"center"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 20  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_167363158=
+0 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1397" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  *************************************** ******** ST=
+ART: Intro Paragraph - unitalicized  ************
+--><table class=3D"gsParagraphTable" width=3D"100%" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0"><tbody><tr><td align=3D"center"><table class=3D"g=
+sContentWidth" width=3D"640" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" align=3D"center"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding3=
+0" style=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:=
+30px"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+"><tbody><tr><td class=3D"gsTextOnWhiteBg sp_html_block gsTextBody" style=
+=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:16px;color:#000000=
+" align=3D"left"><p lang=3D"EN-US"><span style=3D"font-size:16px">The key t=
+akeaways today:<br></span></p><ul><li><span style=3D"font-size:16px">A prom=
+ising outlook for dealmaking and IPOs in 2024=C2=A0</span></li><li><span st=
+yle=3D"font-size:16px">Stocks in the US and Japan are expected to rally=C2=
+=A0</span></li>
+<li><span style=3D"font-size:16px">The new private equity playbook for an e=
+ra of higher-for-longer rates=C2=A0</span></li><li><span data-contrast=3D"a=
+uto" lang=3D"EN-GB" style=3D"font-size:16px">Briefings brainteaser: How doe=
+s the S&P 500 fare in election years=3F</span><span style=3D"font-size:16px=
+"><br></span></li></ul><span style=3D"font-size:16px">Was this newsletter f=
+orwarded to you=3F (<a href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,=
+83c38941,65660b8b" name=3D"" rel=3D"noopener noreferrer" target=3D"_blank" =
+style=3D"color:#186ade;text-decoration:none;font-weight:bold">Sign up now.<=
+/a>)</span></td></tr></tbody></table></td></tr></tbody></table></td></tr></=
+tbody></table><!-- ******** End: Intro Paragraph - unitalicized  ********* =
+********************************** --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889816=
+1 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"2963" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 10  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer10" style=3D"height:10px;height:10px;font-siz=
+e:10px;line-height:10px" height=3D"10"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 10  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889816=
+1 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"2963" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 10  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer10" style=3D"height:10px;height:10px;font-siz=
+e:10px;line-height:10px" height=3D"10"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 10  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890379 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"654" data-orientation_type=3D"custom_module" data-orientat=
+ion_type_name=3D"" data-align=3D"center"><!--  ****************************=
+************* ******** START: Spacer - 20  ************ --><table class=3D"=
+gsSpacerTable" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0"><tbody><tr><td class=3D"gsSpacer20" style=3D"height:20px;height:20px;fo=
+nt-size:20px;line-height:20px" height=3D"20" align=3D"center"></td></tr></t=
+body></table><!-- ******** End: Spacer - 20  ********* ********************=
+**************** --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889034=
+3 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"2963" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ************************************* ******** STAR=
+T: Divider  ************
+--><table class=3D"gsDividerTable" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gs=
+ContentWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0"><tbody><tr><td align=3D"center"><table width=3D"100%" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td class=3D"gsCo=
+ntentWrapper gsBodyPadding30" style=3D"padding-top:0;padding-right:30px;pad=
+ding-bottom:0;padding-left:30px;background-color:#ffffff;font-size:0px;line=
+-height:0px;height:1px"><hr style=3D"border:none;height:1px;background:#d0d=
+0d0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;margin-to=
+p:0;margin-right:0;margin-bottom:0;margin-left:0;outline:none"></td></tr></=
+tbody></table></td></tr></tbody></table></td></tr></tbody></table><!-- ****=
+**** End: Divider  ********* ******************************** --></div></di=
+v></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"806" da=
+ta-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data-=
+align=3D"center"><!--  ***************************************** ******** S=
+TART: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D"=
+100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=
+=3D"center" class=3D"gsSpacer20" style=3D"height:20px;height:20px;font-size=
+:20px;line-height:20px" height=3D"20"></td></tr></tbody></table><!-- ******=
+** End: Spacer - 20  ********* ************************************ --></di=
+v></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890509 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+*********** ******** START: Headline  ************
+--><table class=3D"gsHeadlineTable" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gs=
+FullWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding30" s=
+tyle=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:30px=
+"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><t=
+body><tr><td class=3D"gsHeadlineSmall gsTextOnWhiteBg sp_priority_text gsTe=
+xtHeadline" align=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Bas=
+is';font-size:22px;line-height:30px;font-weight:bold;color:#22263F">What's =
+the outlook for dealmaking, corporate and investor sentiment, and markets=
+=3F</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></=
+table><!-- ******** END: Headline  ************  **************************=
+********** --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1006" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer20" style=3D"height:20px;height:20px;font-siz=
+e:20px;line-height:20px" height=3D"20"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 20  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890594 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+************ ******** START: Paragraph  ************
+--><table class=3D"gsParagraphTable" width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"g=
+sContentWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding3=
+0" style=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:=
+30px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td class=3D"gsTextOnWhiteBg sp_html_block gsTextBody" align=
+=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:16p=
+x;color:#000000">
+<span style=3D"font-size:16px">Despite a challenging global economy and geo=
+political landscape, the outlook for dealmaking, IPOs, and corporate and in=
+vestor activity is expected to improve in 2024, according to Jim Esposito, =
+Dan Dees, and Ashok Varadhan, the co-heads of Goldman Sachs' Global Banking=
+ & Markets business, on=C2=A0</span><a href=3D"https://tracking.gs.com/r/=
+=3Fid=3Dh26b6762f,83c38941,65660b8c" name=3D"" rel=3D"noopener noreferrer" =
+target=3D"_blank" style=3D"color:#186ade;text-decoration:none;font-weight:b=
+old"><span style=3D"font-size:16px">Goldman Sachs Exchanges</span></a><span=
+ style=3D"font-size:16px">.<br><br>For one, the market for IPOs, which star=
+ted to pick up in recent months, should accelerate in the back half of 2024=
+, especially if the Federal Reserve starts cutting rates next year, says De=
+es. =E2=80=9CWhen you step back even further, I think the environment for c=
+apital raising will be very robust because it has to be in the years ahead,=
+=E2=80=9D he says. =E2=80=9CWe are in the age of innovation, of acceleratin=
+g innovation. All that innovation needs to be funded.=E2=80=9D</span><span =
+style=3D"font-size:16px"><br></span>
+</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tab=
+le><!-- ******** End: Paragraph  ********* ********************************=
+** --></div></div></div><div class=3D"layout_type_custom_module"><div><div =
+class=3D" type_1658898161 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+************** ******** START: Spacer - 10  ************ --><table class=3D=
+"gsSpacerTable" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody><tr><td align=3D"center" class=3D"gsSpacer10" style=3D"height=
+:10px;height:10px;font-size:10px;line-height:10px" height=3D"10"></td></tr>=
+</tbody></table><!-- ******** End: Spacer - 10  ********* *****************=
+******************* -->
+</div></div></div><div class=3D"layout_type_custom_module"><div><div class=
+=3D" type_1658890379 type_custom_module sp_text_align_center" data-addition=
+al_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-contain=
+er_width=3D"2963" data-orientation_type=3D"custom_module" data-orientation_=
+type_name=3D"" data-align=3D"center"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ --><table class=3D"gsSp=
+acerTable" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tbody><tr><td align=3D"center" class=3D"gsSpacer20" style=3D"height:20px;h=
+eight:20px;font-size:20px;line-height:20px" height=3D"20"></td></tr></tbody=
+></table><!-- ******** End: Spacer - 20  ********* ************************=
+************ --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889816=
+1 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"2963" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 10  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer10" style=3D"height:10px;height:10px;font-siz=
+e:10px;line-height:10px" height=3D"10"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 10  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658891733 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+******** ******** START: Video Image *************
+--><table class=3D"gsImageTable" width=3D"100%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0"><tbody><tr><td><table class=3D"gsContentWidth" width=
+=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tbody><tr><td class=3D"gsContentWrapper gsBodyPadding30" style=3D"padding-=
+top:0;padding-right:30px;padding-bottom:0;padding-left:30px"><table width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td c=
+lass=3D"sp_image_wrapper gsContentWrapper gsImageWrapper"><a target=3D"_bla=
+nk" href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660b8d" =
+style=3D"color:#186ade;text-decoration:none;font-weight:bold"><img class=3D=
+"gsFullWidth" src=3D"https://assets.storyports.com/pushproject/u/737/images=
+/87517006743.png" style=3D"border:none;display:block;width:580px;height:387=
+px" width=3D"580" height=3D"387"></a></td></tr></tbody></table></td></tr></=
+tbody></table></td></tr></tbody></table><!--  ******** END: Video Image ***=
+**********  ********************************* -->
+</div></div></div><div class=3D"layout_type_custom_module"><div><div class=
+=3D" type_1658890379 type_custom_module sp_text_align_center" data-addition=
+al_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-contain=
+er_width=3D"766" data-orientation_type=3D"custom_module" data-orientation_t=
+ype_name=3D"" data-align=3D"center"><!--  *********************************=
+******** ******** START: Spacer - 20  ************ --><table class=3D"gsSpa=
+cerTable" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><=
+tbody><tr><td align=3D"center" class=3D"gsSpacer20" style=3D"height:20px;he=
+ight:20px;font-size:20px;line-height:20px" height=3D"20"></td></tr></tbody>=
+</table><!-- ******** End: Spacer - 20  ********* *************************=
+*********** --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889816=
+1 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"766" da=
+ta-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data-=
+align=3D"center"><!--  ***************************************** ******** S=
+TART: Spacer - 10  ************ --><table class=3D"gsSpacerTable" width=3D"=
+100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=
+=3D"center" class=3D"gsSpacer10" style=3D"height:10px;height:10px;font-size=
+:10px;line-height:10px" height=3D"10"></td></tr></tbody></table><!-- ******=
+** End: Spacer - 10  ********* ************************************ --></di=
+v></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890594 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+************ ******** START: Paragraph  ************
+--><table class=3D"gsParagraphTable" width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"g=
+sContentWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding3=
+0" style=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:=
+30px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td class=3D"gsTextOnWhiteBg sp_html_block gsTextBody" align=
+=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:16p=
+x;color:#000000"><span style=3D"font-size:16px">M&A activity should also im=
+prove. While private equity's dealmaking velocity is expected to slow with =
+the rise in interest rates, companies are starting to step up their strateg=
+ic activity, says Esposito. =E2=80=9CI think corporates in some places were=
+ getting priced out of the market, and I do expect to see corporates starti=
+ng to step in and fill the void,=E2=80=9D he says. =E2=80=9CWe do expect to=
+ see a reasonable pickup in dealmaking activity, especially now that we see=
+m to be through the other side of this interest rate hiking cycle.=E2=80=9D=
+<br><br>However, what's different about the current market cycle is the lon=
+g-term debt dynamic, says Varadhan. <span dir=3D"ltr">Long-term yields have=
+ risen at a time when some buyers for that debt are pulling back.</span> =
+=E2=80=9CIt's hard to see long-term rates coming down meaningfully. Our bas=
+e case on the trading desk is we expect a more normalized yield curve, a st=
+eeper yield curve, but really more with normalized and lower rates in the f=
+ront end and not a lot of relief in the back end,=E2=80=9D says Varadhan.</=
+span></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody>=
+</table>
+<!-- ******** End: Paragraph  ********* ********************************** =
+--></div></div></div><div class=3D"layout_type_custom_module"><div><div cla=
+ss=3D" type_1658890379 type_custom_module sp_text_align_center" data-additi=
+onal_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-conta=
+iner_width=3D"1006" data-orientation_type=3D"custom_module" data-orientatio=
+n_type_name=3D"" data-align=3D"center"><!--  ******************************=
+*********** ******** START: Spacer - 20  ************ --><table class=3D"gs=
+SpacerTable" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td align=3D"center" class=3D"gsSpacer20" style=3D"height:20px=
+;height:20px;font-size:20px;line-height:20px" height=3D"20"></td></tr></tbo=
+dy></table><!-- ******** End: Spacer - 20  ********* **********************=
+************** --></div></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890343 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"1840" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+********** ******** START: Divider  ************
+--><table class=3D"gsDividerTable" width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gsC=
+ontentWidth" width=3D"640" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ align=3D"center"><tbody><tr><td align=3D"center"><table width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=3D"gsCon=
+tentWrapper gsBodyPadding30" style=3D"padding-top:0;padding-right:30px;padd=
+ing-bottom:0;padding-left:30px;background-color:#ffffff;font-size:0px;line-=
+height:0px;height:1px"><hr style=3D"border:none;height:1px;background:#d0d0=
+d0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;margin-top=
+:0;margin-right:0;margin-bottom:0;margin-left:0;outline:none"></td></tr></t=
+body></table></td></tr></tbody></table></td></tr></tbody></table><!-- *****=
+*** End: Divider  ********* ******************************** --></div></div=
+></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1006" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer20" style=3D"height:20px;height:20px;font-siz=
+e:20px;line-height:20px" height=3D"20"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 20  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890509 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+*********** ******** START: Headline  ************
+--><table class=3D"gsHeadlineTable" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gs=
+FullWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding30" s=
+tyle=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:30px=
+"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><t=
+body><tr><td class=3D"gsHeadlineSmall gsTextOnWhiteBg sp_priority_text gsTe=
+xtHeadline" align=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Bas=
+is';font-size:22px;line-height:30px;font-weight:bold;color:#22263F">US and =
+Japanese stocks are expected to rally in 2024  </td></tr></tbody></table></=
+td></tr></tbody></table></td></tr></tbody></table><!-- ******** END: Headli=
+ne  ************  ************************************ --></div></div></div=
+>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1397" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer20" style=3D"height:20px;height:20px;font-siz=
+e:20px;line-height:20px" height=3D"20"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 20  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658891733 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+******** ******** START: Video Image *************
+--><table class=3D"gsImageTable" width=3D"100%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0"><tbody><tr><td><table class=3D"gsContentWidth" width=
+=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tbody><tr><td class=3D"gsContentWrapper gsBodyPadding30" style=3D"padding-=
+top:0;padding-right:30px;padding-bottom:0;padding-left:30px"><table width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td c=
+lass=3D"sp_image_wrapper gsContentWrapper gsImageWrapper"><a target=3D"_bla=
+nk" href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660b8e" =
+style=3D"color:#186ade;text-decoration:none;font-weight:bold"><img class=3D=
+"gsFullWidth" src=3D"https://assets.storyports.com/pushproject/u/737/images=
+/61117007304.png" style=3D"border:none;display:block;width:580px;height:327=
+px" width=3D"580" height=3D"327"></a></td></tr></tbody></table></td></tr></=
+tbody></table></td></tr></tbody></table><!--  ******** END: Video Image ***=
+**********  ********************************* -->
+</div></div></div><div class=3D"layout_type_custom_module"><div><div class=
+=3D" type_1658890379 type_custom_module sp_text_align_center" data-addition=
+al_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-contain=
+er_width=3D"3310" data-orientation_type=3D"custom_module" data-orientation_=
+type_name=3D"" data-align=3D"center"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ --><table class=3D"gsSp=
+acerTable" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tbody><tr><td align=3D"center" class=3D"gsSpacer20" style=3D"height:20px;h=
+eight:20px;font-size:20px;line-height:20px" height=3D"20"></td></tr></tbody=
+></table><!-- ******** End: Spacer - 20  ********* ************************=
+************ --></div></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890594 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+************ ******** START: Paragraph  ************
+--><table class=3D"gsParagraphTable" width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"g=
+sContentWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding3=
+0" style=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:=
+30px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td class=3D"gsTextOnWhiteBg sp_html_block gsTextBody" align=
+=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:16p=
+x;color:#000000">
+<a href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660b8f" n=
+ame=3D"" rel=3D"noopener noreferrer" target=3D"_blank" style=3D"color:#186a=
+de;text-decoration:none;font-weight:bold"><span data-contrast=3D"auto" lang=
+=3D"EN-GB" style=3D"font-size:16px">US stocks are forecast by Goldman Sachs=
+ Research to have a modest return next year</span></a><span data-contrast=
+=3D"auto" lang=3D"EN-GB" style=3D"font-size:16px">, as above-consensus econ=
+omic growth is partly offset by high valuations.</span><span style=3D"font-=
+size:16px"><span data-ccp-props=3D"{">=C2=A0</span></span><br><span style=
+=3D"font-size:16px"><br></span><ul><li aria-setsize=3D"-1" data-aria-level=
+=3D"1" data-aria-posinset=3D"1" data-font=3D"Symbol" data-leveltext=3D"=C2=
+=B7" data-list-defn-props=3D"{" data-listid=3D"3">
+<span style=3D"font-size:16px"><span data-contrast=3D"auto" lang=3D"EN-GB">=
+The S&P 500 index is expected to rise to 4,700 by the end of 2024, represen=
+ting a price gain of about 5% and a total return of around 6% including div=
+idends. Our economists' </span></span><a alias=3D"" href=3D"https://trackin=
+g.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660b90" name=3D"" rel=3D"noopener n=
+oreferrer" target=3D"_blank" style=3D"color:#186ade;text-decoration:none;fo=
+nt-weight:bold"><span style=3D"font-size:16px"><span data-contrast=3D"auto"=
+ lang=3D"EN-GB">forecast for US GDP growth</span></span></a><span style=3D"=
+font-size:16px"><span data-contrast=3D"auto" lang=3D"EN-GB"> in 2024 is alr=
+eady reflected in stock prices.</span><span data-ccp-props=3D"{">=C2=A0</sp=
+an></span></li>
+<li aria-setsize=3D"-1" data-aria-level=3D"1" data-aria-posinset=3D"2" data=
+-font=3D"Symbol" data-leveltext=3D"=C2=B7" data-list-defn-props=3D"{" data-=
+listid=3D"3"><span style=3D"font-size:16px"><span data-contrast=3D"auto" la=
+ng=3D"EN-GB">Cash, with a 5% risk-free return, remains a competitive altern=
+ative to stocks. Three-month Treasury bills yield around 5.5%, similar to t=
+he earnings yield of the S&P 500 index.</span><span data-ccp-props=3D"{">=
+=C2=A0</span></span></li>
+<li aria-setsize=3D"-1" data-aria-level=3D"1" data-aria-posinset=3D"3" data=
+-font=3D"Symbol" data-leveltext=3D"=C2=B7" data-list-defn-props=3D"{" data-=
+listid=3D"3"><span style=3D"font-size:16px"><span data-contrast=3D"auto" la=
+ng=3D"EN-GB">Our analysts think there may be investment opportunities benea=
+th the surface. "Quality" stocks =E2=80=94 with higher profitability, stron=
+ger balance sheets, and stable sales and earnings growth =E2=80=94 could ou=
+tperform in an environment of persistent investor concern about an impendin=
+g recession. Growth stocks, which have a higher expected growth rate than t=
+he rest of the market, may be attractive given stable economic growth and i=
+nterest rates. Lagging cyclical stocks that are sensitive to a downturn may=
+ rally, given our economists' prediction that recession risk is lower than =
+feared.</span><span data-ccp-props=3D"{">=C2=A0</span></span></li></ul>
+</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tab=
+le><!-- ******** End: Paragraph  ********* ********************************=
+** --></div></div></div><div class=3D"layout_type_custom_module"><div><div =
+class=3D" type_1658890379 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"766" data-orientation_type=3D"custom_module" data-orientat=
+ion_type_name=3D"" data-align=3D"center"><!--  ****************************=
+************* ******** START: Spacer - 20  ************ --><table class=3D"=
+gsSpacerTable" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0"><tbody><tr><td align=3D"center" class=3D"gsSpacer20" style=3D"height:20=
+px;height:20px;font-size:20px;line-height:20px" height=3D"20"></td></tr></t=
+body></table><!-- ******** End: Spacer - 20  ********* ********************=
+**************** -->
+</div></div></div><div class=3D"layout_type_custom_module" style=3D"display=
+:block"><div><div class=3D" type_1658891733 type_custom_module sp_text_alig=
+n_center" data-additional_padding=3D"50" data-columns=3D"1" data-column_pad=
+ding=3D"0" data-container_width=3D"2963" data-orientation_type=3D"custom_mo=
+dule" data-orientation_type_name=3D"" data-align=3D"center"><!--  *********=
+************************** ******** START: Video Image *************
+--><table class=3D"gsImageTable" width=3D"100%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0"><tbody><tr><td><table class=3D"gsContentWidth" width=
+=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tbody><tr><td class=3D"gsContentWrapper gsBodyPadding30" style=3D"padding-=
+top:0;padding-right:30px;padding-bottom:0;padding-left:30px"><table width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td c=
+lass=3D"sp_image_wrapper gsContentWrapper gsImageWrapper"><a target=3D"_bla=
+nk" href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660b91" =
+style=3D"color:#186ade;text-decoration:none;font-weight:bold"><img class=3D=
+"gsFullWidth" src=3D"https://assets.storyports.com/pushproject/u/737/images=
+/86017007405.png" style=3D"border:none;display:block;width:580px;height:440=
+px" width=3D"580" height=3D"440"></a></td></tr></tbody></table></td></tr></=
+tbody></table></td></tr></tbody></table><!--  ******** END: Video Image ***=
+**********  ********************************* -->
+</div></div></div><div class=3D"layout_type_custom_module"><div><div class=
+=3D" type_1658890379 type_custom_module sp_text_align_center" data-addition=
+al_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-contain=
+er_width=3D"3310" data-orientation_type=3D"custom_module" data-orientation_=
+type_name=3D"" data-align=3D"center"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ --><table class=3D"gsSp=
+acerTable" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tbody><tr><td align=3D"center" class=3D"gsSpacer20" style=3D"height:20px;h=
+eight:20px;font-size:20px;line-height:20px" height=3D"20"></td></tr></tbody=
+></table><!-- ******** End: Spacer - 20  ********* ************************=
+************ --></div></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890594 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+************ ******** START: Paragraph  ************
+--><table class=3D"gsParagraphTable" width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"g=
+sContentWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding3=
+0" style=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:=
+30px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td class=3D"gsTextOnWhiteBg sp_html_block gsTextBody" align=
+=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:16p=
+x;color:#000000">
+<span data-contrast=3D"auto" lang=3D"EN-GB"><span data-ccp-parastyle=3D"x_m=
+sonormal" data-ccp-parastyle-defn=3D"{" objectid=3D"" style=3D"font-size:16=
+px">While US stocks may struggle to beat cash, <span data-contrast=3D"auto"=
+ lang=3D"EN-GB"><span data-ccp-parastyle=3D"x_msonormal" data-ccp-parastyle=
+-defn=3D"{" objectid=3D"">Goldman Sachs Research forecasts that=C2=A0</span=
+></span></span></span><a href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762=
+f,83c38941,65660b92" name=3D"" rel=3D"noopener noreferrer" target=3D"_blank=
+" style=3D"color:#186ade;text-decoration:none;font-weight:bold"><span data-=
+contrast=3D"auto" lang=3D"EN-GB"><span data-ccp-parastyle=3D"x_msonormal" d=
+ata-ccp-parastyle-defn=3D"{" objectid=3D"" style=3D"font-size:16px"><span d=
+ata-contrast=3D"auto" lang=3D"EN-GB"><span data-ccp-parastyle=3D"x_msonorma=
+l" data-ccp-parastyle-defn=3D"{" objectid=3D"">the=C2=A0</span></span></spa=
+n></span><span data-contrast=3D"auto" lang=3D"EN-GB"><span data-ccp-parasty=
+le=3D"x_msonormal" data-ccp-parastyle-defn=3D"{" objectid=3D"" style=3D"fon=
+t-size:16px">Japanese equity market will have a transformational year in 20=
+24</span></span></a><span data-contrast=3D"auto" lang=3D"EN-GB"><span data-=
+ccp-parastyle=3D"x_msonormal" data-ccp-parastyle-defn=3D"{" objectid=3D"" s=
+tyle=3D"font-size:16px">, boosted by solid global economic growth and stock=
+ market reforms.</span></span><span style=3D"font-size:16px"><span data-ccp=
+-props=3D"{">=C2=A0</span><br><br></span><ul style=3D"list-style-type:disc"=
+>
+<li><span style=3D"font-size:16px"><span data-contrast=3D"auto" lang=3D"EN-=
+GB">The=C2=A0</span><span data-contrast=3D"auto" lang=3D"EN-GB">TOPIX is</s=
+pan><span data-contrast=3D"auto" lang=3D"EN-GB">=C2=A0projected to rise abo=
+ut 13% to 2,650=C2=A0</span><span data-contrast=3D"auto" lang=3D"EN-GB">by =
+the end of</span><span data-contrast=3D"auto" lang=3D"EN-GB">=C2=A02024.</s=
+pan><span data-contrast=3D"none" lang=3D"EN-GB">=C2=A0</span><span data-con=
+trast=3D"auto" lang=3D"EN-GB">Japanese companies' earnings momentum also re=
+mains strong, Goldman Sachs Research strategists Bruce Kirk and Kazunori Ta=
+tebe write in the team's report.=C2=A0</span><span data-ccp-props=3D"{">=C2=
+=A0</span></span></li>
+<li aria-setsize=3D"-1" data-aria-level=3D"1" data-aria-posinset=3D"5" data=
+-font=3D"Symbol" data-leveltext=3D"=EF=82=B7" data-list-defn-props=3D"{" da=
+ta-listid=3D"6"><span style=3D"font-size:16px"><span data-contrast=3D"auto"=
+ lang=3D"EN-GB">They forecast 12% growth in TOPIX earnings per share in 202=
+3, 8% in fiscal year 2024, and 7% in fiscal year 2025.</span><span data-ccp=
+-props=3D"{">=C2=A0</span></span></li><li aria-setsize=3D"-1" data-aria-lev=
+el=3D"1" data-aria-posinset=3D"6" data-font=3D"Symbol" data-leveltext=3D"=
+=EF=82=B7" data-list-defn-props=3D"{" data-listid=3D"6"><span style=3D"font=
+-size:16px"><span data-contrast=3D"auto" lang=3D"EN-GB">A key part of our a=
+nalysts' forecast is the Tokyo Stock Exchange's corporate governance reform=
+s, which they say =E2=80=9Chave been a game changer for the Japanese equiti=
+es market.=E2=80=9D</span>=C2=A0</span></li></ul></td></tr></tbody></table>=
+</td></tr></tbody></table></td></tr></tbody></table><!--
+******** End: Paragraph  ********* ********************************** --></=
+div></div></div><div class=3D"layout_type_custom_module"><div><div class=3D=
+" type_1658890379 type_custom_module sp_text_align_center" data-additional_=
+padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-container_=
+width=3D"897" data-orientation_type=3D"custom_module" data-orientation_type=
+_name=3D"" data-align=3D"center"><!--  ************************************=
+***** ******** START: Spacer - 20  ************ --><table class=3D"gsSpacer=
+Table" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbo=
+dy><tr><td align=3D"center" class=3D"gsSpacer20" style=3D"height:20px;heigh=
+t:20px;font-size:20px;line-height:20px" height=3D"20"></td></tr></tbody></t=
+able><!-- ******** End: Spacer - 20  ********* ****************************=
+******** --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889034=
+3 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"897" da=
+ta-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data-=
+align=3D"center"><!--  ************************************* ******** START=
+: Divider  ************
+--><table class=3D"gsDividerTable" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gs=
+ContentWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0"><tbody><tr><td align=3D"center"><table width=3D"100%" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td class=3D"gsCo=
+ntentWrapper gsBodyPadding30" style=3D"padding-top:0;padding-right:30px;pad=
+ding-bottom:0;padding-left:30px;background-color:#ffffff;font-size:0px;line=
+-height:0px;height:1px"><hr style=3D"border:none;height:1px;background:#d0d=
+0d0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;margin-to=
+p:0;margin-right:0;margin-bottom:0;margin-left:0;outline:none"></td></tr></=
+tbody></table></td></tr></tbody></table></td></tr></tbody></table><!-- ****=
+**** End: Divider  ********* ******************************** --></div></di=
+v></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"897" da=
+ta-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data-=
+align=3D"center"><!--  ***************************************** ******** S=
+TART: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D"=
+100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=
+=3D"center" class=3D"gsSpacer20" style=3D"height:20px;height:20px;font-size=
+:20px;line-height:20px" height=3D"20"></td></tr></tbody></table><!-- ******=
+** End: Spacer - 20  ********* ************************************ --></di=
+v></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890509 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+*********** ******** START: Headline  ************
+--><table class=3D"gsHeadlineTable" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gs=
+FullWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding30" s=
+tyle=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:30px=
+"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><t=
+body><tr><td class=3D"gsHeadlineSmall gsTextOnWhiteBg sp_priority_text gsTe=
+xtHeadline" align=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Bas=
+is';font-size:22px;line-height:30px;font-weight:bold;color:#22263F">How pri=
+vate equity strategies are changing amid higher-for-longer rates  </td></tr=
+></tbody></table></td></tr></tbody></table></td></tr></tbody></table><!-- *=
+******* END: Headline  ************  ************************************ -=
+-></div></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890379 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"1344" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+************** ******** START: Spacer - 20  ************ --><table class=3D=
+"gsSpacerTable" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody><tr><td align=3D"center" class=3D"gsSpacer20" style=3D"height=
+:20px;height:20px;font-size:20px;line-height:20px" height=3D"20"></td></tr>=
+</tbody></table><!-- ******** End: Spacer - 20  ********* *****************=
+******************* --></div></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890594 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+************ ******** START: Paragraph  ************
+--><table class=3D"gsParagraphTable" width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"g=
+sContentWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding3=
+0" style=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:=
+30px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td class=3D"gsTextOnWhiteBg sp_html_block gsTextBody" align=
+=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:16p=
+x;color:#000000">
+<span data-contrast=3D"auto" lang=3D"EN-GB" style=3D"font-size:16px">As cha=
+nges in everything from technology and interest rates to sustainability con=
+cerns ripple through the corporate world, private equity enjoys some advant=
+ages over public-market investing when it comes to large-scale transformati=
+on for the modern economy. But=C2=A0</span><a alias=3D"" href=3D"https://tr=
+acking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660b93" name=3D"" rel=3D"noope=
+ner noreferrer" target=3D"_blank" style=3D"color:#186ade;text-decoration:no=
+ne;font-weight:bold"><span style=3D"font-size:16px"><span data-contrast=3D"=
+none" lang=3D"EN-GB"><span data-ccp-charstyle=3D"Hyperlink">private equity'=
+s playbook will likely be quite different than in the past, according to Go=
+ldman Sachs Asset Management</span></span></span></a><span style=3D"font-si=
+ze:16px"><span data-contrast=3D"none" lang=3D"EN-GB"><span data-ccp-charsty=
+le=3D"Hyperlink">.</span></span><span data-ccp-props=3D"{">=C2=A0</span></s=
+pan><br><span style=3D"font-size:16px"><span data-ccp-props=3D"{">=C2=A0</s=
+pan><br></span><ul>
+<li aria-setsize=3D"-1" data-aria-level=3D"1" data-aria-posinset=3D"1" data=
+-font=3D"Symbol" data-leveltext=3D"=EF=82=B7" data-list-defn-props=3D"{" da=
+ta-listid=3D"7">
+<span style=3D"font-size:16px"><span data-contrast=3D"auto" lang=3D"EN-GB">=
+Private equity general partners have adapted over the past 40 years to emph=
+asize different return drivers, </span></span><a alias=3D"" href=3D"https:/=
+/tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660b94" name=3D"" rel=3D"no=
+opener noreferrer" target=3D"_blank" style=3D"color:#186ade;text-decoration=
+:none;font-weight:bold"><span style=3D"font-size:16px"><span data-contrast=
+=3D"auto" lang=3D"EN-GB">write James Gelfer and Juliana Hadas,=C2=A0</span>=
+</span><span style=3D"font-size:16px"><span data-contrast=3D"auto" lang=3D"=
+EN-GB">in Portfolio Solutions for Alternatives Capital Markets and Strategy=
+,=C2=A0</span></span><span style=3D"font-size:16px"><span data-contrast=3D"=
+auto" lang=3D"EN-GB">in a report</span></span></a><span style=3D"font-size:=
+16px"><span data-contrast=3D"auto" lang=3D"EN-GB">. Leverage and financial =
+structuring have become less important, while multiple expansion and operat=
+ional factors have gained prominence.</span><span data-ccp-props=3D"{">=C2=
+=A0</span></span>
+</li><li aria-setsize=3D"-1" data-aria-level=3D"1" data-aria-posinset=3D"2"=
+ data-font=3D"Symbol" data-leveltext=3D"=EF=82=B7" data-list-defn-props=3D"=
+{" data-listid=3D"7"><span style=3D"font-size:16px"><span data-contrast=3D"=
+auto" lang=3D"EN-GB">The next era=C2=A0is expected to=C2=A0be defined by sl=
+ower economic growth, shrinking=C2=A0labor=C2=A0forces, and higher inflatio=
+n =E2=80=94 leaving investors and operators to contend with headwinds to to=
+pline real growth, margin compression, and a structurally higher cost of ca=
+pital.</span><span data-ccp-props=3D"{">=C2=A0<span style=3D"font-size:16px=
+"><br></span></span></span></li></ul></td></tr></tbody></table></td></tr></=
+tbody></table></td></tr></tbody></table><!-- ******** End: Paragraph  *****=
+**** ********************************** --></div></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658891733 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+******** ******** START: Video Image *************
+--><table class=3D"gsImageTable" width=3D"100%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0"><tbody><tr><td><table class=3D"gsContentWidth" width=
+=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tbody><tr><td class=3D"gsContentWrapper gsBodyPadding30" style=3D"padding-=
+top:0;padding-right:30px;padding-bottom:0;padding-left:30px"><table width=
+=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td c=
+lass=3D"sp_image_wrapper gsContentWrapper gsImageWrapper"><a href=3D"https:=
+//tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660b95" target=3D"_blank" =
+style=3D"color:#186ade;text-decoration:none;font-weight:bold"><img class=3D=
+"gsFullWidth" src=3D"https://assets.storyports.com/pushproject/u/737/images=
+/37217006671.jpg" style=3D"border:none;display:block;width:580px;height:387=
+px" width=3D"580" height=3D"387"></a></td></tr></tbody></table></td></tr></=
+tbody></table></td></tr></tbody></table><!--  ******** END: Video Image ***=
+**********  ********************************* -->
+</div></div></div><div class=3D"layout_type_custom_module"><div><div class=
+=3D" type_1658890379 type_custom_module sp_text_align_center" data-addition=
+al_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-contain=
+er_width=3D"1006" data-orientation_type=3D"custom_module" data-orientation_=
+type_name=3D"" data-align=3D"center"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ --><table class=3D"gsSp=
+acerTable" width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tbody><tr><td align=3D"center" class=3D"gsSpacer20" style=3D"height:20px;h=
+eight:20px;font-size:20px;line-height:20px" height=3D"20"></td></tr></tbody=
+></table><!-- ******** End: Spacer - 20  ********* ************************=
+************ --></div></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890594 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+************ ******** START: Paragraph  ************
+--><table class=3D"gsParagraphTable" width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"g=
+sContentWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding3=
+0" style=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:=
+30px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td class=3D"gsTextOnWhiteBg sp_html_block gsTextBody" align=
+=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:16p=
+x;color:#000000"><ul>
+<li aria-setsize=3D"-1" data-aria-level=3D"1" data-aria-posinset=3D"3" data=
+-font=3D"Symbol" data-leveltext=3D"=EF=82=B7" data-list-defn-props=3D"{" da=
+ta-listid=3D"7"><span style=3D"font-size:16px"><span data-contrast=3D"auto"=
+ lang=3D"EN-GB">For private equity, operational value-creation levers =E2=
+=80=94 revenue growth and margin expansion =E2=80=94 are poised to become t=
+he main determinants of success in the new regime. While M&A may be more ch=
+allenging, organic growth may be more important. Margin enhancement is like=
+ly to rely on=C2=A0optimizing=C2=A0processes, enhancing supply chains, and =
+rationalizing the cost structure.</span><span data-ccp-props=3D"{">=C2=A0</=
+span></span></li><li aria-setsize=3D"-1" data-aria-level=3D"1" data-aria-po=
+sinset=3D"4" data-font=3D"Symbol" data-leveltext=3D"=EF=82=B7" data-list-de=
+fn-props=3D"{" data-listid=3D"7">
+<span data-contrast=3D"auto" lang=3D"EN-GB" style=3D"font-size:16px">New te=
+chnology tools could be especially valuable for businesses and industries t=
+hat are performing well but below potential. But =E2=80=9Ccautionary tales =
+abound of companies that spent heavily on technology without reaping the fu=
+ll benefits due to organizational frictions,=E2=80=9D Gelfer and Hadas poin=
+t out.</span><span data-ccp-props=3D"{" style=3D"font-size:16px">=C2=A0</sp=
+an><span style=3D"font-size:16px"><br></span></li></ul></td></tr></tbody></=
+table></td></tr></tbody></table></td></tr></tbody></table><!-- ******** End=
+: Paragraph  ********* ********************************** --></div></div></=
+div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889816=
+1 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"3310" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 10  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer10" style=3D"height:10px;height:10px;font-siz=
+e:10px;line-height:10px" height=3D"10"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 10  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889034=
+3 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1344" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ************************************* ******** STAR=
+T: Divider  ************
+--><table class=3D"gsDividerTable" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gs=
+ContentWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0"><tbody><tr><td align=3D"center"><table width=3D"100%" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td class=3D"gsCo=
+ntentWrapper gsBodyPadding30" style=3D"padding-top:0;padding-right:30px;pad=
+ding-bottom:0;padding-left:30px;background-color:#ffffff;font-size:0px;line=
+-height:0px;height:1px"><hr style=3D"border:none;height:1px;background:#d0d=
+0d0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;margin-to=
+p:0;margin-right:0;margin-bottom:0;margin-left:0;outline:none"></td></tr></=
+tbody></table></td></tr></tbody></table></td></tr></tbody></table><!-- ****=
+**** End: Divider  ********* ******************************** --></div></di=
+v></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889816=
+1 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"2963" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 10  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer10" style=3D"height:10px;height:10px;font-siz=
+e:10px;line-height:10px" height=3D"10"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 10  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889816=
+1 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"2963" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 10  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer10" style=3D"height:10px;height:10px;font-siz=
+e:10px;line-height:10px" height=3D"10"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 10  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889050=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1344" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ************************************** ******** STA=
+RT: Headline  ************
+--><table class=3D"gsHeadlineTable" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gs=
+FullWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding30" s=
+tyle=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:30px=
+"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><t=
+body><tr><td class=3D"gsHeadlineSmall gsTextOnWhiteBg sp_priority_text gsTe=
+xtHeadline" align=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Bas=
+is';font-size:22px;line-height:30px;font-weight:bold;color:#22263F">Briefin=
+gs Brainteaser: Election-year returns</td></tr></tbody></table></td></tr></=
+tbody></table></td></tr></tbody></table><!-- ******** END: Headline  ******=
+******  ************************************ --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1344" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer20" style=3D"height:20px;height:20px;font-siz=
+e:20px;line-height:20px" height=3D"20"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 20  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890594 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"2963" data-orientation_type=3D"custom_module" data-orienta=
+tion_type_name=3D"" data-align=3D"center"><!--  ***************************=
+************ ******** START: Paragraph  ************
+--><table class=3D"gsParagraphTable" width=3D"100%" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"g=
+sContentWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding3=
+0" style=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:=
+30px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody><tr><td class=3D"gsTextOnWhiteBg sp_html_block gsTextBody" align=
+=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:16p=
+x;color:#000000">
+<span data-contrast=3D"auto" lang=3D"EN-GB" style=3D"font-size:16px">Since =
+1976, the S&P 500 Index of US stocks has registered an average annual retur=
+n of 11%. How much has the S&P 500 returned, on average, in the 12 presiden=
+tial-election years during that period=3F</span><span data-ccp-props=3D"{" =
+style=3D"font-size:16px">=C2=A0</span><span data-contrast=3D"auto" lang=3D"=
+EN-GB" style=3D"font-size:16px"><br></span><br><span data-contrast=3D"auto"=
+ lang=3D"EN-GB" style=3D"font-size:16px">A) 4%<br>B) 8%<br>C) 12%<br>D) 15%=
+</span><br><br><a href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38=
+941,65660b96" name=3D"" rel=3D"noopener noreferrer" target=3D"_blank" style=
+=3D"color:#186ade;text-decoration:none;font-weight:bold"><span data-contras=
+t=3D"auto" lang=3D"EN-GB" style=3D"font-size:16px"><strong>Check the answer=
+ here.</strong></span></a></td></tr></tbody></table></td></tr></tbody></tab=
+le></td></tr></tbody></table><!-- ******** End: Paragraph  *********
+********************************** --></div></div></div><div class=3D"layou=
+t_type_custom_module"><div><div class=3D" type_1658890379 type_custom_modul=
+e sp_text_align_center" data-additional_padding=3D"50" data-columns=3D"1" d=
+ata-column_padding=3D"0" data-container_width=3D"2963" data-orientation_typ=
+e=3D"custom_module" data-orientation_type_name=3D"" data-align=3D"center"><=
+!--  ***************************************** ******** START: Spacer - 20 =
+ ************ --><table class=3D"gsSpacerTable" width=3D"100%" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center" class=
+=3D"gsSpacer20" style=3D"height:20px;height:20px;font-size:20px;line-height=
+:20px" height=3D"20"></td></tr></tbody></table><!-- ******** End: Spacer - =
+20  ********* ************************************ --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889034=
+3 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1367" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ************************************* ******** STAR=
+T: Divider  ************
+--><table class=3D"gsDividerTable" width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gsC=
+ontentWidth" width=3D"640" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ align=3D"center"><tbody><tr><td align=3D"center"><table width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=3D"gsCon=
+tentWrapper gsBodyPadding30" style=3D"padding-top:0;padding-right:30px;padd=
+ing-bottom:0;padding-left:30px;background-color:#ffffff;font-size:0px;line-=
+height:0px;height:1px"><hr style=3D"border:none;height:1px;background:#d0d0=
+d0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;margin-top=
+:0;margin-right:0;margin-bottom:0;margin-left:0;outline:none"></td></tr></t=
+body></table></td></tr></tbody></table></td></tr></tbody></table><!-- *****=
+*** End: Divider  ********* ******************************** --></div></div=
+></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1367" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td clas=
+s=3D"gsSpacer20" style=3D"height:20px;height:20px;font-size:20px;line-heigh=
+t:20px" height=3D"20" align=3D"center"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 20  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889050=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1367" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ************************************** ******** STA=
+RT: Headline  ************
+--><table class=3D"gsHeadlineTable" width=3D"100%" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gs=
+FullWidth" width=3D"640" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" a=
+lign=3D"center"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding30" s=
+tyle=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:30px=
+"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><t=
+body><tr><td class=3D"gsHeadlineSmall gsTextOnWhiteBg sp_priority_text gsTe=
+xtHeadline" style=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:2=
+2px;line-height:30px;font-weight:bold;color:#22263F" align=3D"left">Goldman=
+ Sachs in the news</td></tr></tbody></table></td></tr></tbody></table></td>=
+</tr></tbody></table><!-- ******** END: Headline  ************  ***********=
+************************* --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889816=
+1 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1278" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 10  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer10" style=3D"height:10px;height:10px;font-siz=
+e:10px;line-height:10px" height=3D"10"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 10  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"2963" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer20" style=3D"height:20px;height:20px;font-siz=
+e:20px;line-height:20px" height=3D"20"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 20  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889230=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1344" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  *************************************** ******** ST=
+ART: News Item  ************
+--><table class=3D"gsNewsItemTable" width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gs=
+ContentWidth" width=3D"640" align=3D"center" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding30=
+" style=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:3=
+0px"><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+><tbody><tr><td class=3D"gsFullWidth gsDisplayBlock" valign=3D"top" style=
+=3D"padding-right:125px"><table width=3D"100%" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0"><tbody><tr><td class=3D"gsTextOnWhiteBg sp_html_block =
+gsTextBodySubText" align=3D"left" style=3D"font-family:Arial , 'sans-serif'=
+ , 'Basis';font-size:12px;line-height:13px;color:#6B6B6B;padding-bottom:5px=
+">
+<a alias=3D"" href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,=
+65660b97" name=3D"" rel=3D"noopener noreferrer" style=3D"color:#186ADE;text=
+-decoration:none;font-weight:bold" target=3D"_blank">CNBC</a>=C2=A0 Novembe=
+r 12</td></tr><tr><td class=3D"gsTextOnWhiteBg sp_html_block gsTextBody" al=
+ign=3D"left" style=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:=
+16px;color:#000000;line-height:20px"><a class=3D"gsTextOnWhiteBg" href=3D"h=
+ttps://tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660b98" name=3D"" rel=
+=3D"noopener noreferrer" style=3D"color:#000000;text-decoration:none;font-w=
+eight:normal" target=3D"_blank">Korea, Taiwan, and Vietnam will continue to=
+ benefit from tech exports pickup in 2024: Goldman Sachs (4:02)</a></td></t=
+r></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td>=
+</tr></tbody></table><!-- ******** End: News Item  ********* **************=
+******************** --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1344" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td alig=
+n=3D"center" class=3D"gsSpacer20" style=3D"height:20px;height:20px;font-siz=
+e:20px;line-height:20px" height=3D"20"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 20  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"781" da=
+ta-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data-=
+align=3D"center"><!--  ***************************************** ******** S=
+TART: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D"=
+100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=
+=3D"center" class=3D"gsSpacer20" style=3D"height:20px;height:20px;font-size=
+:20px;line-height:20px" height=3D"20"></td></tr></tbody></table><!-- ******=
+** End: Spacer - 20  ********* ************************************ --></di=
+v></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889816=
+1 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1348" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ***************************************** ******** =
+START: Spacer - 10  ************ --><table class=3D"gsSpacerTable" width=3D=
+"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td clas=
+s=3D"gsSpacer10" style=3D"height:10px;height:10px;font-size:10px;line-heigh=
+t:10px" height=3D"10" align=3D"center"></td></tr></tbody></table><!-- *****=
+*** End: Spacer - 10  ********* ************************************ --></d=
+iv></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889034=
+3 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1367" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ************************************* ******** STAR=
+T: Divider  ************
+--><table class=3D"gsDividerTable" width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gsC=
+ontentWidth" width=3D"640" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ align=3D"center"><tbody><tr><td align=3D"center"><table width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=3D"gsCon=
+tentWrapper gsBodyPadding30" style=3D"padding-top:0;padding-right:30px;padd=
+ing-bottom:0;padding-left:30px;background-color:#ffffff;font-size:0px;line-=
+height:0px;height:1px"><hr style=3D"border:none;height:1px;background:#d0d0=
+d0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;margin-top=
+:0;margin-right:0;margin-bottom:0;margin-left:0;outline:none"></td></tr></t=
+body></table></td></tr></tbody></table></td></tr></tbody></table><!-- *****=
+*** End: Divider  ********* ******************************** --></div></div=
+></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889272=
+3 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"1407" d=
+ata-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data=
+-align=3D"center"><!--  ****************************************** ********=
+ START: Footer Banner ************
+--><table class=3D"gsTwoColImageTable" width=3D"100%" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0"><tbody><tr><td style=3D"padding-top:20px;paddin=
+g-right:0;padding-bottom:20px;padding-left:0"><table class=3D"gsContentWidt=
+h" width=3D"640" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"=
+center"><tbody><tr><td align=3D"center"><table width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=3D"gsContentWrap=
+per gsBodyPadding30" style=3D"padding-top:0;padding-right:30px;padding-bott=
+om:0;padding-left:30px"><table width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0"><tbody><tr><td class=3D"sp_image_wrapper gsContentWrapp=
+er gsImageWrapper" align=3D"left">
+<div class=3D"gsLightImg"><a href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b=
+6762f,83c38941,65660b99" target=3D"_blank" style=3D"color:#186ade;text-deco=
+ration:none;font-weight:bold"><img src=3D"https://assets.storyports.com/pus=
+hproject/u/737/images/89816589278.jpg" style=3D"border:none;display:block;w=
+idth:60px;height:25px" width=3D"60" height=3D"25"></a></div><!--[if !mso]><=
+! --><div class=3D"gsDarkImg" style=3D"display:none;overflow:hidden;float:l=
+eft;width:0px;max-height:0px;max-width:0px;line-height:0px;visibility:hidde=
+n"><a href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660b9a=
+" target=3D"_blank" style=3D"color:#186ade;text-decoration:none;font-weight=
+:bold"><img src=3D"http://assets.storyports.com/pushproject/u/2812/images/9=
+6916457791.png" style=3D"border:none;display:block;width:60px;height:25px" =
+width=3D"60" height=3D"25"></a></div><!--<![endif]--></td><td class=3D"sp_i=
+mage_wrapper gsContentWrapper gsImageWrapper" align=3D"right">
+<div class=3D"gsLightImg"><img src=3D"https://assets.storyports.com/pushpro=
+ject/u/2812/images/42816521618.png" style=3D"border:none;display:block;widt=
+h:195px;height:28px" width=3D"195" height=3D"28"></div><!--[if !mso]><! -->=
+<div class=3D"gsDarkImg" style=3D"display:none;overflow:hidden;float:left;w=
+idth:0px;max-height:0px;max-width:0px;line-height:0px;visibility:hidden"><i=
+mg src=3D"https://assets.storyports.com/pushproject/u/2857/images/329165241=
+38.png" style=3D"border:none;display:block;width:195px;height:28px" width=
+=3D"195" height=3D"28"></div><!--<![endif]--></td></tr></tbody></table></td=
+></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><=
+!--  ******** END: Footer Banner ************  ****************************=
+************ --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889034=
+3 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"820" da=
+ta-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data-=
+align=3D"center"><!--  ************************************* ******** START=
+: Divider  ************
+--><table class=3D"gsDividerTable" width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gsC=
+ontentWidth" width=3D"640" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ align=3D"center"><tbody><tr><td align=3D"center"><table width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=3D"gsCon=
+tentWrapper gsBodyPadding30" style=3D"padding-top:0;padding-right:30px;padd=
+ing-bottom:0;padding-left:30px;background-color:#ffffff;font-size:0px;line-=
+height:0px;height:1px"><hr style=3D"border:none;height:1px;background:#d0d0=
+d0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;margin-top=
+:0;margin-right:0;margin-bottom:0;margin-left:0;outline:none"></td></tr></t=
+body></table></td></tr></tbody></table></td></tr></tbody></table><!-- *****=
+*** End: Divider  ********* ******************************** --></div></div=
+></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"820" da=
+ta-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data-=
+align=3D"center"><!--  ***************************************** ******** S=
+TART: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D"=
+100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=
+=3D"gsSpacer20" style=3D"height:20px;height:20px;font-size:20px;line-height=
+:20px" height=3D"20" align=3D"center"></td></tr></tbody></table><!-- ******=
+** End: Spacer - 20  ********* ************************************ --></di=
+v></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658892893 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"820" data-orientation_type=3D"custom_module" data-orientat=
+ion_type_name=3D"" data-align=3D"center"><!--  ****************************=
+************ ******** START: Footer  ************
+--><table class=3D"gsPrefooterTable" width=3D"100%" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0"><tbody><tr><td align=3D"center"><table class=3D"g=
+sContentWidth" width=3D"640" cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" align=3D"center"><tbody><tr><td class=3D"gsContentWrapper gsBodyPadding3=
+0" style=3D"padding-top:0;padding-right:30px;padding-bottom:0;padding-left:=
+30px"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+"><tbody><tr><td class=3D"gsTextOnWhiteBg sp_html_block gsTextBodySubText" =
+style=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:12px;color:#3=
+E5463" align=3D"left">Some of the images used in this newsletter are source=
+d via Getty Images. The data provided in this newsletter is for information=
+ purposes only and should not be construed as investment or tax advice nor =
+as a recommendation to buy, sell, or hold any particular security. Goldman =
+Sachs believes the data in this newsletter is accurate, but does not verify=
+ its accuracy independently and does not warrant or guarantee that it is ac=
+curate or complete. Goldman Sachs has no obligation to provide any updates =
+or changes to the data. No investment decisions should be made using this d=
+ata. Past performance is not indicative of future performance.<br><br>To th=
+e extent this newsletter includes material from Goldman Sachs Global Bankin=
+g & Markets, please <a href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,=
+83c38941,65660b9b" name=3D"" rel=3D"noopener noreferrer" style=3D"color:#18=
+6ADE;text-decoration:underline;font-weight:bold" target=3D"_blank">click he=
+re</a> for information relating to Goldman Sachs Global Banking & Markets m=
+aterial and your reliance on it. The Investment Strategy Group, part of the=
+ Asset & Wealth Management business (=E2=80=9CAWM=E2=80=9D) of GS, focuses =
+on asset allocation strategy formation and market analysis for GS Wealth Ma=
+nagement. Any information that references ISG, including their model portfo=
+lios, represents the views of ISG, is not financial research and is not a p=
+roduct of GS Global Investment Research and may vary significantly from vie=
+ws expressed by individual portfolio management teams within AWM, or other =
+groups at GS.<br><br>To the extent this newsletter includes material from G=
+oldman Sachs Asset Management, please <a href=3D"https://tracking.gs.com/r/=
+=3Fid=3Dh26b6762f,83c38941,65660b9c" name=3D"" rel=3D"noopener noreferrer" =
+style=3D"color:#186ADE;text-decoration:underline;font-weight:bold" target=
+=3D"_blank">click here</a> for additional disclosures.<br><br><a href=3D"ht=
+tps://tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660b9d&e=3DcDE9Q0ZBNzc=
+4NUUtNjg4Ni00QzdBLUFGQTMtMEQxRUIxRDdDODRB&s=3DsmBzsB9sS0AaXPPlmhVV5DtpO3vEb=
+M4VH6B2nhuRRi0" name=3D"" rel=3D"noopener noreferrer" style=3D"color:#186AD=
+E;text-decoration:underline;font-weight:bold" target=3D"_blank">Click here<=
+/a> to unsubscribe.<br><br>=C2=A9 2023 Goldman Sachs, All rights reserved.<=
+br>200 West Street, New York, NY 10282, USA</td></tr></tbody></table></td><=
+/tr></tbody></table></td></tr></tbody></table>
+<!-- ******** End: Footer  ********* *********************************** --=
+></div></div></div><div class=3D"layout_type_custom_module" style=3D"displa=
+y:block"><div><div class=3D" type_1658890379 type_custom_module sp_text_ali=
+gn_center" data-additional_padding=3D"50" data-columns=3D"1" data-column_pa=
+dding=3D"0" data-container_width=3D"820" data-orientation_type=3D"custom_mo=
+dule" data-orientation_type_name=3D"" data-align=3D"center"><!--  *********=
+******************************** ******** START: Spacer - 20  ************ =
+--><table class=3D"gsSpacerTable" width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0"><tbody><tr><td class=3D"gsSpacer20" style=3D"height:=
+20px;height:20px;font-size:20px;line-height:20px" height=3D"20" align=3D"ce=
+nter"></td></tr></tbody></table><!-- ******** End: Spacer - 20  ********* *=
+*********************************** --></div></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890379 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"820" data-orientation_type=3D"custom_module" data-orientat=
+ion_type_name=3D"" data-align=3D"center"><!--  ****************************=
+************* ******** START: Spacer - 20  ************ --><table class=3D"=
+gsSpacerTable" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0"><tbody><tr><td class=3D"gsSpacer20" style=3D"height:20px;height:20px;fo=
+nt-size:20px;line-height:20px" height=3D"20" align=3D"center"></td></tr></t=
+body></table><!-- ******** End: Spacer - 20  ********* ********************=
+**************** --></div></div></div>
+<div class=3D"layout_type_custom_module" style=3D"display:block"><div><div =
+class=3D" type_1658890343 type_custom_module sp_text_align_center" data-add=
+itional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-co=
+ntainer_width=3D"820" data-orientation_type=3D"custom_module" data-orientat=
+ion_type_name=3D"" data-align=3D"center"><!--  ****************************=
+********* ******** START: Divider  ************
+--><table class=3D"gsDividerTable" width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0"><tbody><tr><td align=3D"center"><table class=3D"gsC=
+ontentWidth" width=3D"640" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"=
+ align=3D"center"><tbody><tr><td align=3D"center"><table width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=3D"gsCon=
+tentWrapper gsBodyPadding30" style=3D"padding-top:0;padding-right:30px;padd=
+ing-bottom:0;padding-left:30px;background-color:#ffffff;font-size:0px;line-=
+height:0px;height:1px"><hr style=3D"border:none;height:1px;background:#d0d0=
+d0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;margin-top=
+:0;margin-right:0;margin-bottom:0;margin-left:0;outline:none"></td></tr></t=
+body></table></td></tr></tbody></table></td></tr></tbody></table><!-- *****=
+*** End: Divider  ********* ******************************** --></div></div=
+></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"820" da=
+ta-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data-=
+align=3D"center"><!--  ***************************************** ******** S=
+TART: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D"=
+100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=
+=3D"gsSpacer20" style=3D"height:20px;height:20px;font-size:20px;line-height=
+:20px" height=3D"20" align=3D"center"></td></tr></tbody></table><!-- ******=
+** End: Spacer - 20  ********* ************************************ --></di=
+v></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889302=
+1 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"820" da=
+ta-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data-=
+align=3D"center"><!--  ****************************************** ******** =
+START: Footer Links  ************ --><table class=3D"gsFooterLinksTable" wi=
+dth=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><t=
+d align=3D"center"><table class=3D"gsContentWidth" width=3D"640" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center"><tbody><tr><td clas=
+s=3D"gsContentWrapper gsBodyPadding30" style=3D"padding-top:0;padding-right=
+:30px;padding-bottom:0;padding-left:30px"><table width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr>
+<td class=3D"gsFullWidth gsDisplayBlock gsAlignCenter sp_html_block" style=
+=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:11px;color:#186ADE=
+" align=3D"left"><a href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,83c=
+38941,65660b9e" name=3D"" rel=3D"noopener noreferrer" target=3D"_blank" sty=
+le=3D"color:#186ade;text-decoration:none;font-weight:bold">GS.com=C2=A0</a>=
+ | =C2=A0<a alias=3D"" href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,=
+83c38941,65660b9f" name=3D"" rel=3D"noopener noreferrer" style=3D"color:#18=
+6ADE;font-weight:bold;text-decoration:none" target=3D"_blank">Careers Blog<=
+/a> =C2=A0|=C2=A0 <a alias=3D"" href=3D"https://tracking.gs.com/r/=3Fid=3Dh=
+26b6762f,83c38941,65660ba0" name=3D"" rel=3D"noopener noreferrer" style=3D"=
+color:#186ADE;font-weight:bold;text-decoration:none" target=3D"_blank">Priv=
+acy and Security</a> =C2=A0|=C2=A0 <a alias=3D"" href=3D"https://tracking.g=
+s.com/r/=3Fid=3Dh26b6762f,83c38941,65660ba1" name=3D"" rel=3D"noopener nore=
+ferrer" style=3D"color:#186ADE;font-weight:bold;text-decoration:none" targe=
+t=3D"_blank">Terms of Use</a></td>
+<td class=3D"gsFullWidth gsDisplayBlock gsAlignCenter sp_html_block" style=
+=3D"font-family:Arial , 'sans-serif' , 'Basis';font-size:11px;color:#186ADE=
+" align=3D"right">
+<a href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660ba2" n=
+ame=3D"" rel=3D"noopener noreferrer" style=3D"color:#186ADE;font-weight:bol=
+d;text-decoration:none" target=3D"_blank"><img src=3D"https://assets.storyp=
+orts.com/pushproject/u/2812/images/22916521737.png" style=3D"border:none;wi=
+dth:22px;height:22px" alt=3D"Twitter" class=3D"fr-fic fr-dii" width=3D"22" =
+height=3D"22"></a><a href=3D"https://tracking.gs.com/r/=3Fid=3Dh26b6762f,83=
+c38941,65660ba3" name=3D"" rel=3D"noopener noreferrer" target=3D"_blank" st=
+yle=3D"color:#186ade;text-decoration:none;font-weight:bold"><img src=3D"htt=
+ps://assets.storyports.com/pushproject/u/2812/images/80216521737.png" style=
+=3D"border:none;width:22px;height:22px" alt=3D"Instagram" class=3D"fr-fic f=
+r-dii" width=3D"22" height=3D"22"></a><a href=3D"https://tracking.gs.com/r/=
+=3Fid=3Dh26b6762f,83c38941,65660ba4" name=3D"" rel=3D"noopener noreferrer" =
+style=3D"color:#186ADE;font-weight:bold;text-decoration:none" target=3D"_bl=
+ank"><img src=3D"https://assets.storyports.com/pushproject/u/2812/images/45=
+016521737.png" style=3D"border:none;width:22px;height:22px" alt=3D"Youtube"=
+ class=3D"fr-fic fr-dii" width=3D"22" height=3D"22"></a><a href=3D"https://=
+tracking.gs.com/r/=3Fid=3Dh26b6762f,83c38941,65660ba5" name=3D"" rel=3D"noo=
+pener noreferrer" style=3D"color:#186ADE;font-weight:bold;text-decoration:n=
+one" target=3D"_blank"><img src=3D"https://assets.storyports.com/pushprojec=
+t/u/737/images/88116833025.png" style=3D"border:none;width:22px;height:22px=
+" alt=3D"Youtube" class=3D"fr-fic fr-dii" width=3D"22" height=3D"22"></a>
+</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tab=
+le><!-- ******** End: Footer Links  ********* *****************************=
+******** --></div></div></div><div class=3D"layout_type_custom_module"><div=
+><div class=3D" type_1658890379 type_custom_module sp_text_align_center" da=
+ta-additional_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" d=
+ata-container_width=3D"820" data-orientation_type=3D"custom_module" data-or=
+ientation_type_name=3D"" data-align=3D"center"><!--  **********************=
+******************* ******** START: Spacer - 20  ************ --><table cla=
+ss=3D"gsSpacerTable" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0"><tbody><tr><td class=3D"gsSpacer20" style=3D"height:20px;height:2=
+0px;font-size:20px;line-height:20px" height=3D"20" align=3D"center"></td></=
+tr></tbody></table><!-- ******** End: Spacer - 20  ********* **************=
+********************** -->
+</div></div></div><div class=3D"layout_type_custom_module"><div><div class=
+=3D" type_1658890379 type_custom_module sp_text_align_center" data-addition=
+al_padding=3D"50" data-columns=3D"1" data-column_padding=3D"0" data-contain=
+er_width=3D"820" data-orientation_type=3D"custom_module" data-orientation_t=
+ype_name=3D"" data-align=3D"center"><!--  *********************************=
+******** ******** START: Spacer - 20  ************ --><table class=3D"gsSpa=
+cerTable" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><=
+tbody><tr><td class=3D"gsSpacer20" style=3D"height:20px;height:20px;font-si=
+ze:20px;line-height:20px" height=3D"20" align=3D"center"></td></tr></tbody>=
+</table><!-- ******** End: Spacer - 20  ********* *************************=
+*********** --></div></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"820" da=
+ta-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data-=
+align=3D"center"><!--  ***************************************** ******** S=
+TART: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D"=
+100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=
+=3D"gsSpacer20" style=3D"height:20px;height:20px;font-size:20px;line-height=
+:20px" height=3D"20" align=3D"center"></td></tr></tbody></table><!-- ******=
+** End: Spacer - 20  ********* ************************************ --></di=
+v></div></div>
+<div class=3D"layout_type_custom_module"><div><div class=3D" type_165889037=
+9 type_custom_module sp_text_align_center" data-additional_padding=3D"50" d=
+ata-columns=3D"1" data-column_padding=3D"0" data-container_width=3D"820" da=
+ta-orientation_type=3D"custom_module" data-orientation_type_name=3D"" data-=
+align=3D"center"><!--  ***************************************** ******** S=
+TART: Spacer - 20  ************ --><table class=3D"gsSpacerTable" width=3D"=
+100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><tr><td class=
+=3D"gsSpacer20" style=3D"height:20px;height:20px;font-size:20px;line-height=
+:20px" height=3D"20" align=3D"center"></td></tr></tbody></table><!-- ******=
+** End: Spacer - 20  ********* ************************************ --></di=
+v></div></div></div></div></div></td></tr></tbody></table></div><style data=
+-ignore-inlining>@media (prefers-color-scheme: dark) { #_t::before {content=
+:url('https://wzouwes4.emltrk.com/v2/wzouwes4=3Frd&i=3DCFA7785E-6886-4C7A-A=
+FA3-0D1EB1D7C84A');}} @media (prefers-color-scheme: light) { #_t::before {c=
+ontent:url('https://wzouwes4.emltrk.com/v2/wzouwes4=3Frl&i=3DCFA7785E-6886-=
+4C7A-AFA3-0D1EB1D7C84A');}} @media print{ #_t {background-image:url('https:=
+//wzouwes4.emltrk.com/v2/wzouwes4=3Fp&i=3DCFA7785E-6886-4C7A-AFA3-0D1EB1D7C=
+84A');}} div.OutlookMessageHeader {background-image:url('https://wzouwes4.e=
+mltrk.com/v2/wzouwes4=3Ff&i=3DCFA7785E-6886-4C7A-AFA3-0D1EB1D7C84A')} table=
+.moz-email-headers-table {background-image:url('https://wzouwes4.emltrk.com=
+/v2/wzouwes4=3Ff&i=3DCFA7785E-6886-4C7A-AFA3-0D1EB1D7C84A')} blockquote #_t=
+ {background-image:url('https://wzouwes4.emltrk.com/v2/wzouwes4=3Ff&i=3DCFA=
+7785E-6886-4C7A-AFA3-0D1EB1D7C84A')} #MailContainerBody #_t {background-ima=
+ge:url('https://wzouwes4.emltrk.com/v2/wzouwes4=3Ff&i=3DCFA7785E-6886-4C7A-=
+AFA3-0D1EB1D7C84A')}</style><div id=3D"_t"></div>
+<img src=3D"https://wzouwes4.emltrk.com/v2/wzouwes4=3Fi=3DCFA7785E-6886-4C7=
+A-AFA3-0D1EB1D7C84A" width=3D"1" height=3D"1" border=3D"0" alt=3D"" /><img =
+height=3D'0' width=3D'0' alt=3D'' src=3D'https://tracking.gs.com/r/=3Fid=3D=
+h26b6762f,83c38941,1'/></body>
+ </html>
+
+------=_NextPart_207_1FBE2C89.1FBE2C89--
+

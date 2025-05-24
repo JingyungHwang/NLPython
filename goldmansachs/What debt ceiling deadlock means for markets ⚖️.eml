@@ -1,0 +1,3844 @@
+Delivered-To: godnamu1213@gmail.com
+Received: by 2002:a05:6a11:4384:b0:3fb:4943:eea1 with SMTP id mk4csp1238606pxb;
+        Fri, 3 Feb 2023 07:04:49 -0800 (PST)
+X-Google-Smtp-Source: AK7set/Iu9k3pJyfk4YUbxTLxrs8mssRCvnNCarJmWq/h+aI/3rYl16zLbyyD5QCQuM2L4Uyx+Wh
+X-Received: by 2002:a05:622a:58b:b0:3b8:6ae7:1757 with SMTP id c11-20020a05622a058b00b003b86ae71757mr19724553qtb.38.1675436689267;
+        Fri, 03 Feb 2023 07:04:49 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1675436689; cv=none;
+        d=google.com; s=arc-20160816;
+        b=sczbNjxUGcuXkB3fvN7gcz4H/FUfmcsxBkiYT/3KpMa0eOKBwDE7ILubM7Jh/bNvcV
+         lw81zKW+6tcoMusaXwPkF4M6o7zg76/X1iWzfs7TJvrZXqbl4SdJ23kHOlzyRUQQTuVk
+         XoQdZV9o9AG3N2VQKG21D8nqd3X8A0sxLIuYf0wtsSWZSKvL0//XbVXT1pjxMfqGZX5i
+         8uS/s7ipUuf/0YuFYs1byIKB1lDsEQ4CfV3uBczjOwnlyNU2L1kleRpVYEdRVkn+e+tQ
+         jUEP4cOa68D6Md2aD9lKtfoPpp8oVZ3CjgjMagqWV9RuQ5r16ROTygzaYBz6YdSqpeu6
+         HatQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:mime-version:reply-to:to:date:subject:from
+         :dkim-signature;
+        bh=mPqKC0utADAxZUKIPMxBTeN5Lo9AoviOUNFxhXjJIYI=;
+        b=Dci04BOles5zx8cUCDE+2ji9BYrC+7aac5w9s9+qJrgDnpo/yI+NpVJsCYVfq1AAiu
+         hW/Pqxr+Gxv81cElJ+x5QEjoG9fyFMYbkwadL8GHNfOQ/eNLjErO3xpuBHQZYPz/KjP7
+         K9khLtl9JhSB6blNksWRoyXyLPOGzOPVHju07JT90M1JpaRtrTQPQMbaQkVBqMiv1TkK
+         s5HL4MBSlP3lUlXq9rS8t/4uQJypWhzEQas30K9iol1ke0y787gJEwNcONGAyNbA3l8a
+         BCDrUxjmt8jFV88r7ycV6RyX+HG7zWdR6tkV3d0jyvj9sI70K/sNgnbSKn1gp4Tdeh5d
+         w34w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gs.com header.s=201802 header.b=JHkN+Suz;
+       spf=pass (google.com: domain of goldmansemail@email.gsam.gs.com designates 207.17.46.166 as permitted sender) smtp.mailfrom=goldmansemail@email.gsam.gs.com;
+       dmarc=pass (p=NONE sp=REJECT dis=NONE) header.from=gs.com
+Return-Path: <goldmansemail@email.gsam.gs.com>
+Received: from mxe04.gs.com (mxe04.gs.com. [207.17.46.166])
+        by mx.google.com with ESMTPS id u12-20020a05622a198c00b003b68eca2401si1965151qtc.385.2023.02.03.07.04.48
+        for <godnamu1213@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 03 Feb 2023 07:04:49 -0800 (PST)
+Received-SPF: pass (google.com: domain of goldmansemail@email.gsam.gs.com designates 207.17.46.166 as permitted sender) client-ip=207.17.46.166;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gs.com header.s=201802 header.b=JHkN+Suz;
+       spf=pass (google.com: domain of goldmansemail@email.gsam.gs.com designates 207.17.46.166 as permitted sender) smtp.mailfrom=goldmansemail@email.gsam.gs.com;
+       dmarc=pass (p=NONE sp=REJECT dis=NONE) header.from=gs.com
+Received: from pps.filterd (gsppabdp02sd.idz.gs.com [127.0.0.1])
+	by gsppabdp02sd.idz.gs.com (8.16.1.2/8.16.1.2) with SMTP id 313F2H5H019468;
+	Fri, 3 Feb 2023 10:04:37 -0500
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gs.com; h=from : subject : date :
+ to : reply-to : mime-version : message-id : content-type; s=201802;
+ bh=mPqKC0utADAxZUKIPMxBTeN5Lo9AoviOUNFxhXjJIYI=;
+ b=JHkN+Suz8r3BUBBpRrti3aUtGdG9fstwd7FkFdcsGOYyrZlD295c4ITTr2PziqfGoXUZ
+ l7AEy6Qkgm360cZ4eJjPnc3WK2ilxCHZA1a9fiRP4pOTm8Kh3dgERUyfdvQBL7Oe0mhD
+ iCIPUaPO1JpTXwQW7jX6eciyIjNPLgUMfvwMOU/sWQvIs1mF5Wp25kEMzSOJnjBdSlQQ
+ +Z+NrTStlGNYlF2hmCbCVhHOAthHHis9hXk7XtNrkTtpYEs+ck9Bu7sRd8mlEzkvHbqU
+ vfML5fDquu+8YZMVFUXBE7n7O/d/nVJbdCtGDYyDH2CaBt8lJKCvDOU3VeNp+4Syczt0 lw== 
+Received: from gsppacdp05nd.inz.gs.com ([10.205.68.213])
+	by gsppabdp02sd.idz.gs.com with ESMTP id 3ncy3euuut-1
+	for <godnamu1213@gmail.com>; Fri, 03 Feb 2023 10:04:36 -0500
+Received: from pps.filterd (gsppacdp05nd.inz.gs.com [127.0.0.1])
+	by gsppacdp05nd.inz.gs.com (8.16.1.2/8.16.1.2) with SMTP id 313Exgxo017529
+	for <godnamu1213@gmail.com>; Fri, 3 Feb 2023 10:04:36 -0500
+Received: from amx-e-123226-005.dc.gs.com (amx-e-123226-005.dc.gs.com [10.134.131.151])
+	by gsppacdp05nd.inz.gs.com with ESMTP id 3ndu426gec-1
+	for <godnamu1213@gmail.com>; Fri, 03 Feb 2023 10:04:35 -0500
+Received: from acprod.gs.com (d403676-036.dc.gs.com [10.124.66.236])
+	by amx-e-123226-005.dc.gs.com (Sentrion-MTA-4.5.3/Sentrion-MTA-4.5.3) with ESMTP id 313F3GHh007928
+	for <godnamu1213@gmail.com>; Fri, 3 Feb 2023 10:03:34 -0500
+From: "Briefings from Goldman Sachs" <briefings@gs.com>
+Subject: =?utf-8?B?V2hhdCBkZWJ0IGNlaWxpbmcgZGVhZGxvY2sgbWVhbnMgZm9yIA==?=
+ =?utf-8?B?bWFya2V0cyDimpbvuI8=?=
+Date: Fri, 03 Feb 2023 10:03:32 -0500
+To: <godnamu1213@gmail.com>
+Reply-To: "Briefings from Goldman Sachs" <briefings@gs.com>
+MIME-Version: 1.0
+X-mailer: nlserver, Build 6.7.0
+Message-ID: <NM61F2E3E9470FC1720GSACPROD@email.gsam.gs.com>
+Content-Type: multipart/alternative;
+	charset="windows-1252";
+	boundary="----=_NextPart_588_2055CD10.2055CD10"
+X-GS-AMX: 1
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.562,18.0.930
+ definitions=2023-02-03_11:2023-02-03,2023-02-03 signatures=0
+X-Proofpoint-Virus-Version: vendor=fsecure engine=2.50.10434:6.0.562,18.0.930
+ definitions=2023-02-03_11:2023-02-03,2023-02-03 signatures=0
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_588_2055CD10.2055CD10
+Content-Type: text/plain;
+	charset="windows-1252"
+Content-Transfer-Encoding: 8bit
+
+- And: Discover why the French economy might outperform its European peers. Enjoy some of the top intelligence from Goldman Sachs.   
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41cb 		
+	
+	
+	
+
+	
+	
+	
+
+	
+
+In today's edition: 
+
+	- Find out   https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41cc how deadlock over the U.S. debt ceiling could affect financial markets .  (And   https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41cd test your knowledge with a quiz  on the subject.) 
+	- After the highs of 2022, could the   https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41ce U.S. dollar be past its peak? 
+	- And   https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41cf we speak to the director-general of the BBC  about how the U.K's national broadcaster is still evolving after more than 100 years.  
+(Was this newsletter forwarded to you?  https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41d0 Sign up now. ) 	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+
+How could the debt limit impasse impact equity markets?  	
+	
+	
+
+	
+
+If previous episodes are any guide, the   https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41d1 wrangling over the U.S. debt ceiling could create uncertainty for financial markets , according to Goldman Sachs Research. 
+
+The Treasury Department was forced to begin taking special measures last month to keep paying its obligations as the federal government bumped up against its $31.4 trillion borrowing limit, setting the stage for a political stand-off to raise the debt ceiling later this year. 
+
+David Kostin , the chief U.S. equity strategist in Goldman Sachs Research, says the current political environment shares some similarities with 2011, when a debt-limit standoff caused significant disruption. The S&P 500 fell by 17% from peak to trough in just 22 trading days. Volatility, as measured by the VIX Index, tripled. Although the debt limit was raised on Aug. 2, 2011, equity markets didn't reach their trough until Aug. 8, 2011, following the Standard & Poor's downgrade of the U.S. sovereign debt rating from AAA to AA+. 
+
+Typically though, these events only have a limited impact on equities, Kostin says. The S&P 500 had a median peak-to-trough decline of just 4% in the last five episodes, with none besides 2011 triggering a drop of even 5%. 
+
+That said, stocks with a higher exposure to government spending tend to be more vulnerable, according to Kostin. A basket of 77 stocks tracked by Goldman Sachs analysts with at least 20% of their sales tied to government spending has lagged the S&P 500 by a median of five percentage points in the weeks ahead of the four most recent debt-limit deadlines. The basket consists primarily of stocks from the health care, aerospace and defense, professional services, and materials industries. 
+	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41d2 	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+
+Why the US dollar may be past its peak  	
+	
+	
+
+	
+
+The U.S. dollar may have soared against other major currencies in 2022, but   https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41d3 the greenback is likely past its peak , according to Kamakshya Trivedi , the head of currencies, interest rates and emerging markets strategy in Goldman Sachs Research. 
+
+During our   https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41d4 31st annual Global Strategy Conference   in London last month , Trivedi said the prospect of lower headline inflation, a less aggressive Federal Reserve hiking cycle and an improving growth outlook in regions such as China and Europe, create a “very negative mix” of news for the U.S. dollar. 
+	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41d5 	
+	
+	
+
+	
+
+Goldman Sachs' Kamakshya Trivedi at the Global Strategy Conference 	
+	
+	
+
+	
+
+“We think the dollar has peaked,” Trivedi says. “We don't think we are going to revisit the highs in the dollar you saw at the peak of the U.K. fiscal fears last year…Even with the dollar depreciation that you have seen so far from its peak, the dollar remains a pretty overvalued asset. There is a fair amount of overvaluation to unwind.” 
+  
+For the dollar to continue declining, there will need to be a sustained shift in capital flows away from dollar assets towards those in Europe and the rest of the world, Trivedi adds. “It's barely started. That needs to go a lot further for further strength in the euro [and] weakness in the dollar.” 
+  
+The U.S. currency could still have a second wind, Trivedi says. He doesn't expect a U.S. recession or that the Fed will necessarily have to cut interest rates in the later part of 2023. However, it will probably take time and evidence of resilient growth for the market to align with that view, he says. “The U.S. economy is also more resilient to the interest rate hikes delivered in other parts of the world, so you might see phases of dollar strength over the next three to six months.” 
+	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+
+Could France outperform its European peers?  	
+	
+	
+
+	
+
+France's economy is expected to have a   https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41d6 period of weakness this year, but the country will narrowly avoid a recession , according to Goldman Sachs Research. 
+
+Data revealed that French GDP expanded in the final quarter of 2022, but three factors could be crucial to the country's economic performance in 2023: 	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41d7 	
+	
+	
+
+	
+
+	- Energy : France is less exposed than other European countries to the continent's energy crisis because its economic growth is less reliant on industrial production (and, thus, gas) for growth and is not as dependent on Russia for the gas. “The natural hedge of a diversified economy, lower exposure to gas and strong fiscal support,” underlie the Goldman Sachs Research view for France to outperform its European peers. 
+
+	- Inflation : Consumer inflation in France was among the lowest of the EU countries in 2022, due in part to significant fiscal support. But as 2023 arrives, several factors are skewing inflation risks to the upside. For one, the energy price caps that proved so effective last year in limiting gas and electricity inflation are increasing at the beginning of this year. Additionally, 2023 also brings a 1.8% increase in the minimum wage, affecting about 15% of the country's labor force. 
+
+	- Government intervention:  France's government is “walking a narrow fiscal path” with a number of factors in the coming year that could “catalyze a re-focusing of investors on French fiscal issues,” according to Goldman Sachs Research. For example, the government's budget includes growth expectations of 1.0% for 2023, which is currently above consensus. The way the government reacts to consumer inflation could lead to a larger primary deficit if price growth surprises to the upside. Moreover, the French government could face pushback from the European Commission and other member states on the European Council on its above-consensus growth projections. They could force it to downgrade those projections and plan for more aggressive efforts to address debt accumulation. 
+	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+
+Giving employees a bigger ownership stake can boost returns 	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41d8 	
+	
+	
+
+	
+
+Above (L to R): Pete Stavros of KKR and Alison Mass of Goldman Sachs 
+	
+	
+	
+
+Investment firm KKR has seen promising results from employee ownership programs in its portfolio companies. On a recent episode of   https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41d9 Exchanges at Goldman Sachs: Great Investors , Pete Stavros , co-head of Americas private equity at KKR, describes how an employee ownership model is creating wealth for workers while generating some of the highest returns for KKR in decades. 
+
+Employee ownership is growing.  When KKR bought garage door manufacturer C.H.I. Overhead Doors in 2015, only a small sliver of the employees held equity ownership in the company. Over the next seven and a half years, KKR expanded ownership levels to all of C.H.I.'s nearly 1,000 employees — all of whom got substantial cash payouts when the company was sold to Nucor Corp. last year. As a result of the ownership culture, “we started measuring employee engagement, acting on the feedback that we got, delegating decision-making rights to workers,” Stavros says. “So we built a health clinic. We built an on-site cafeteria. We built new break rooms…We were able to reduce scrap. We were able to drive inventory down, drive labor productivity in the plant, increase the efficiency of the routes our truck drivers drove.” 
+
+For KKR, the sale generated the highest return in 30 years . “When we sold the business, we made 10 times our money for our investors,” Stavros says. “Workers made hundreds of millions of dollars. We had truck drivers make almost a million dollars, factory workers make six and a half times their annual income. It was a real win across every dimension.” 
+
+Stavros attributes his “human capital-oriented approach to investing”  to hearing stories from his father, who worked in construction, about the lack of alignment between workers and employers. “My dad, being in a union and us living through a lot of worker strife and strikes, certainly led to a real appreciation of the importance of labor relations,” he says. “You want more hours because you get paid for every hour you work, and your employer wants to control labor costs so they want fewer hours.” 
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41da Listen to the full podcast.  
+
+	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+
+After more than 100 years of broadcasting, the BBC is still evolving  	
+	
+	
+
+	
+
+In an  https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41db episode of Talks at GS , Tim Davie , the BBC's director-general, highlights how the U.K.'s national broadcaster is adapting to two significant challenges: rapid market change and the age of rampant disinformation. 	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41dc 	
+	
+	
+
+	
+
+Above (L to R): Anthony Gutman of Goldman Sachs and Tim Davie of the BBC 	
+	
+	
+
+	
+
+	- Disinformation poses a “massive” challenge.  About 70% of the world's population no longer have access to a fully free press, Davie tells Talks host Anthony Gutman . “It is a huge fight,” he says. “And a massive challenge. And we have to decide together, as societies and individuals, how we're going to sort this out. Because the trend lines are terrible.”   
+	- The speed of market change is “unforgiving.”  For more than 100 years, the BBC has entertained and informed audiences around the world. But the emergence of competitors like Netflix and TikTok has undoubtedly transformed the broadcasting and digital landscape. Davie says his focus isn't on beating rivals, but about being distinctive and differentiated. “I'm not trying to chase every opportunity. I've got to focus,” he says. “The instinct is, and the BBC has done a bit of it in the past, let's just go wide and wide to cover off every base, every community. No. Focus on where we're utterly different.” 
+
+	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+
+Briefings brainteaser: This isn't the first debt ceiling saga 	
+	
+	
+
+	
+
+	
+
+Since 1960, how many times has U.S. Congress raised, extended or revised the debt limit? 
+
+A) 61 
+B) 78 
+C) 84 
+D) 95 
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41dd Check your answer here. 	
+	
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+ICYMI: In the media 	
+	
+	
+
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41de Bloomberg   February 2 	
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41df Goldman Sachs' Moe on Market Strategy   (11:10) 	
+	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41e0 Investment Week   February 1 	
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41e1 Opinion: Breakthroughs and bargains reveal value in biotech 	
+	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41e2 Bloomberg   January 27 	
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41e3 Goldman's Oppenheimer says European recession 'isn't happening'   (2:14) 	
+	
+	
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	
+	
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41e4  https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41e5 		
+	
+	
+	
+
+	
+	
+	
+
+	
+
+Some of the images used in this newsletter are sourced via Getty Images. The data provided in this newsletter is for information purposes only and should not be construed as investment or tax advice nor as a recommendation to buy, sell, or hold any particular security. Goldman Sachs believes the data in this newsletter is accurate, but does not verify its accuracy independently and does not warrant or guarantee that it is accurate or complete. Goldman Sachs has no obligation to provide any updates or changes to the data. No investment decisions should be made using this data. 
+
+To the extent this newsletter includes material from Goldman Sachs Global Banking & Markets, please  https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41e6 click here  for information relating to Goldman Sachs Global Banking & Markets material and your reliance on it. 
+
+To the extent this newsletter includes material from Goldman Sachs Asset Management, please  https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41e7 click here  for additional disclosures. 
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41e8&e=cDE9Z29kbmFtdTEyMTNAZ21haWwuY29t&s=lWmQhw92EnNVFK0bUiSZ5WXFN6dcF0XOiDBtcK1PaSE Click here  to unsubscribe. 
+
+© 2023 Goldman Sachs, All rights reserved. 
+200 West Street, New York, NY 10282, USA 	
+	
+	
+
+	
+
+	
+
+	
+	
+	
+
+	
+
+ https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41e9 GS.com   |    https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41ea Careers Blog   |   https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41eb Privacy and Security   |   https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41ec Terms of Use 	 https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41ed  https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41ee  https://tracking.gs.com/r/?id=t1f2e3e94,70fc1720,655e41ef
+
+------=_NextPart_588_2055CD10.2055CD10
+Content-Type: text/html;
+	charset="windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" ""><HTML xmlns:o=3D"urn:schemas-microsoft-com:offi=
+ce:office" 
+xmlns:v=3D"urn:schemas-microsoft-com:vml" 
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD>  
+<META charset=3D"UTF-8">  
+<META name=3D"x-apple-disable-message-reformatting">  
+<META name=3D"format-detection" content=3D"telephone=3Dno">  
+<META name=3D"viewport" content=3D"width=3D750">  
+<META content=3D"IE=3D9; IE=3D8; IE=3D7; IE=3DEDGE" http-equiv=3D"X-UA-Comp=
+atible"> 
+ 
+<STYLE type=3D"text/css">@import url("https://fonts.googleapis.com/css=3Ffa=
+mily=3D");  td,p,div {overflow-wrap: break-word;word-wrap: break-word;} 
+@media screen and (max-width: 500px) {body {width:100% !important;min-width=
+:0px !important;}div[id=3D"email_container_inner"] {width:100% !important;m=
+in-width:0px !important;}img {max-width:100%; height:auto !important;}.remo=
+veme {display:none !important;}.sp_column_adjustment {width:100% !important=
+;max-width:100% !important; }.fullwidth {width:100% !important; padding-lef=
+t:0px !important; padding-right:0px !important; height:auto !important;}img=
+.fullwidth {width:100% !important; max-width:100%;}.layout_col_half,.layout=
+_col_third,.layout_col_twothirds,.blockme,.sp_layout_column {display:block =
+!important; width:auto !important; padding-left:0px !important; padding-rig=
+ht:0px !important; border-left:none !important; border-right:none !importan=
+t;padding-bottom:15px;}.sp_text_content{box-sizing: border-box;}.sp_layout_=
+column:last-of-type,.blockme:last-of-type {padding-bottom:0px;}.inlineBlock=
+Me {display:inline-block !important;}.centerme {text-align:center !importan=
+t;}.centerme img {float:none !important; display:inline-block !important;}.=
+padme {padding:10px !important;}.sp_button_cont {float:none !important; dis=
+play:inline-block !important;}} 
+@font-face { font-family: "Basis"; src: url('https://cdn.gs.com/fonts/basis=
+/v1/basis-regular.woff') format('woff'), url('https://cdn.gs.com/fonts/basi=
+s/v1/basis-regular.woff2') format('woff2'); font-weight: normal; font-style=
+: normal; font-display: swap; } @font-face { font-family: "Basis"; src: url=
+('https://cdn.gs.com/fonts/basis/v1/basis-bold.woff') format('woff'), url('=
+https://cdn.gs.com/fonts/basis/v1/basis-bold.woff2') format('woff2'); font-=
+weight: bold; font-style: normal; font-display: swap; } [style*=3D'Basis'] =
+{ font-family: Basis, Arial, sans-serif !important; } body { background-col=
+or:#FFFFFF !important;} a, a:link, a:visited {text-decoration:none; color:#=
+2178C4;} a, a:link, a:visited img {border:none} a:hover, a:active img {bord=
+er:none} p {margin: 1em 0;} a img {border:none;}  img {outline:none; text-d=
+ecoration:none; -ms-interpolation-mode: bicubic;}
+=2EReadMsgBody { width: 100%;} .ExternalClass {width: 100%;} .ExternalClass=
+, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClas=
+s td, .ExternalClass div {line-height:100%;} body {width:100% !important; -=
+webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:=
+0;}  table {border-spacing:0;mso-table-lspace:0pt; mso-table-rspace:0pt;} t=
+able td {border-collapse: collapse;line-height: 1.5em;} table { border-coll=
+apse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; } .yshortcuts a =
+{border-bottom: none !important;} #outlook a {padding:0;}  a[href^=3D"tel"]=
+, a[href^=3D"sms"] {text-decoration: none;color:inherit;pointer-events: non=
+e;cursor: default;} td, p, div{overflow-wrap:normal;word-wrap:normal;-webki=
+t-hyphens:manual;-ms-hyphens: manual;-moz-hyphens: manual;hyphens: manual;}=
+ ul {padding: 0 0 0 15px;list-style-type: square;} ul li {margin-bottom: 15=
+px;}
+=2EgsButtonPrimary:hover td {color: #ffffff !important; background-color: #=
+3B98E2;} .gsButtonPrimary:hover td a {color: #ffffff !important;} .gsButton=
+Secondary:hover td {color: #ffffff !important; background-color: #22263F;} =
+.gsButtonSecondary:hover td a {color: #ffffff !important;}   .gsButtonLight=
+:hover td {color: #22263F !important; background-color: #FFFFFF;} .gsButton=
+Light:hover td a {color: #22263F !important;}   .gsThreeColumn {text-align:=
+ center;font-size: 0; } .gsButton {border-collapse: separate;border-radius:=
+ 3px} .gsButton td {border-radius: 3px} .gsTierTable .gsTierTableWrap {back=
+ground-color: #ffffff;border-radius: 6px;} .gsTierTable .gsTierTableWrap th=
+,.gsTierTable .gsTierTableWrap td {padding: 15px;} .gsTierTable .gsTierTabl=
+eWrap th {background-color: #FAFAFC;font-weight: normal;color: #828599;} .g=
+sTierTable .gsTierTableWrap th:first-child {border-top-left-radius: 6px;}
+=2EgsTierTable .gsTierTableWrap th:last-child {border-top-right-radius: 6px=
+;} .gsTierTable .gsTierTableWrap td {border-top:1px solid #DCDDE5;} @media =
+screen and (max-width:620px) { /* -------- Template Styles -------- */ #gsE=
+mailWrapper {min-width: 0px !important} img {max-width:100% !important; hei=
+ght:auto !important;} .gsFullWidth {width:100% !important; padding-left:0px=
+ !important; padding-right:0px !important; height:auto !important;float:non=
+e !important;} img.gsFullWidth {width:100% !important; max-width:100% !impo=
+rtant;} img.gsThreeQuarterWidth {width:75% !important; max-width:75% !impor=
+tant;} img.gsHalfWidth {width:50% !important; max-width:50% !important;} im=
+g.gsMediaThumb {width:150px !important; max-width:150px !important;} img.gs=
+MediaThumb130 {width:130px !important; max-width:130px !important;}
+=2EgsDisplayBlock {display:block !important; width:100% !important; padding=
+-left:0px !important; padding-right:0px !important; border-left:none !impor=
+tant; border-right:none !important; } .gsDisplayBlock:not(:last-of-type){pa=
+dding-bottom:10px !important;} .gsDisplayBlock.gsRemoveBottomPadding {paddi=
+ng-bottom:0px !important;} .gsDisplayBlockSpacer {padding-bottom:0px !impor=
+tant;height:30px !important;} .gsDisplayBlock10:not(:last-of-type) {padding=
+-bottom:10px !important;} .gsDisplayBlock15:not(:last-of-type) {padding-bot=
+tom:15px !important;} .gsDisplayBlock25:not(:last-of-type) {padding-bottom:=
+25px !important;} .gsDisplayTable {display: table !important;} .gsAlignCent=
+er {text-align:center !important;} .gsRemoveOnMobile {display:none !importa=
+nt} .gsRemoveMaxWidth {max-width: inherit !important;} .gsDisplayInlineBloc=
+k {display:inline-block !important}
+=2EgsDisplayInlineBlock10 {padding-bottom:10px !important;} .gsDisplayInlin=
+eBlock15 {padding-bottom:15px !important;} .gsDisplayInlineBlock25 {padding=
+-bottom:25px !important;} .gsSidePadding {padding-left:0px !important;paddi=
+ng-right:0px !important;} .gsContentWidth {width:100% !important} .gsButton=
+ {width:100% !important;} .gsButton td {text-align: center;} .gsButton td a=
+ {text-align: center; display:block; width: 100%;} .gsRemoveBottomPadding {=
+padding-bottom:0px !important;} .gsRemoveTopPadding {padding-top:0px !impor=
+tant;} .gsRemoveRightPadding {padding-right:0px !important;} .gsRemoveLeftP=
+adding {padding-left:0px !important;} .gsBodyPadding40, .gsBodyPadding30, .=
+gsBodyPadding20, .gsBodyPadding15, .gsBodyPadding0 {padding-left:20px !impo=
+rtant;padding-right:20px !important;} .gsMobilePaddingTop10 {padding-top: 1=
+0px !important;} .gsMobilePaddingTop20 {padding-top: 20px !important;}
+=2EgsMobilePaddingTop30 {padding-top: 30px !important;} .gsMobilePaddingBot=
+tom10 {padding-bottom: 10px !important;} .gsMobilePaddingBottom20 {padding-=
+bottom: 20px !important;} .gsMobilePaddingBottom30 {padding-bottom: 30px !i=
+mportant;} .gsMobilePaddingRight10 {padding-right: 10px !important;} .gsMob=
+ilePaddingRight20 {padding-right: 20px !important;} .gsMobilePaddingRight30=
+ {padding-right: 30px !important;} .gsMobilePaddingLeft10 {padding-left: 10=
+px !important;} .gsMobilePaddingLeft20 {padding-left: 20px !important;} .gs=
+MobilePaddingLeft30 {padding-left: 30px !important;} .gsMobilePadding10 {pa=
+dding: 10px !important;} .gsMobilePadding20 {padding: 20px !important;} .gs=
+MobilePadding30 {padding: 30px !important;} .gsSpacer20 {height:15px !impor=
+tant;font-size:15px !important;line-height:15px !important;height:15px !imp=
+ortant;}
+=2EgsSpacer30 {height:20px !important;font-size:20px !important;line-height=
+:20px !important;height:20px !important;} .gsSpacer40 {height:25px !importa=
+nt;font-size:25px !important;line-height:25px !important;height:25px !impor=
+tant;} .gsSpacer60 {height:35px !important;font-size:35px !important;line-h=
+eight:35px !important;height:35px !important;} .gsSpacer80 {height:50px !im=
+portant;font-size:50px !important;line-height:50px !important;height:50px !=
+important;} .gsSpacer90 {height:60px !important;font-size:60px !important;l=
+ine-height:60px !important;height:60px !important;} .gsMobileRemoveBottomLe=
+ftRadius {border-bottom-left-radius: 0 !important;} .gsMobileRemoveBottomRi=
+ghtRadius {border-bottom-right-radius: 0 !important;} .gsMobileRemoveTopLef=
+tRadius {border-top-left-radius: 0 !important;} .gsMobileRemoveTopRightRadi=
+us {border-top-right-radius: 0 !important;}
+=2EgsMobileAddBottomLeftRadius {border-bottom-left-radius: 4px !important;}=
+ .gsMobileAddBottomRightRadius {border-bottom-right-radius: 4px !important;=
+} .gsMobileAddTopLeftRadius {border-top-left-radius: 4px !important;} .gsMo=
+bileAddTopRightRadius {border-top-right-radius: 4px !important;} .gsImgMaxM=
+obile {max-width: 200px;height: auto;} .gsTextHeadline {font-size: 26px !im=
+portant} .gsTextBody {font-size: 18px !important} .gsTextBodySubText {font-=
+size: 14px !important} } @media (prefers-color-scheme: dark ) { /* Shows Da=
+rk Mode-Only Content, Like Images */ .gsDarkImg { display:block !important;=
+ width: auto !important; overflow: visible !important; float: none !importa=
+nt; max-height:inherit !important; max-width:inherit !important; line-heigh=
+t: auto !important; margin-top:0px !important; visibility:inherit !importan=
+t; } .gsDarkImg img {height:auto !important} /*
+=2EgsDarkImgInlineBlock { display:inline-block !important; width: auto !imp=
+ortant; overflow: visible !important; float: none !important; max-height:in=
+herit !important; max-width:inherit !important; line-height: auto !importan=
+t; margin-top:0px !important; visibility:inherit !important; } .gsDarkImgIn=
+lineBlock img {height:auto !important} */ /* Hides Light Mode-Only Content,=
+ Like Images  .gsLightImg { display:none; display:none !important; } .gsLig=
+htImg img { display:none; display:none !important; height: 0px !important; =
+width: 0px !important } */ /* Custom Dark Mode Font Colors  .gsTextOnWhiteB=
+g { color: #000000 !important; } .gsDarkModeBg { background-color: #000000 =
+!important; }  */ } </STYLE>
+  
+<META name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001"></HEAD>  
+<BODY style=3D"margin: 0px; padding: 0px;">
+<STYLE>@media screen and (max-width:500px){.sp_mobile_text_align_left   .sp=
+_image_container{text-align:left!important}.sp_mobile_text_align_left   .sp=
+_text_title{text-align:left!important}.sp_mobile_text_align_left   .sp_auth=
+or_details{text-align:left!important}.sp_mobile_text_align_left   .sp_autho=
+r_details   td{text-align:left!important}.sp_mobile_text_align_left   .sp_b=
+utton_wrapper{text-align:left!important}.sp_mobile_text_align_left   .sp_bu=
+tton_wrapper   td{text-align:left!important}.sp_mobile_text_align_left   .s=
+p_text_headline   .sp_text_headline_title{text-align:left!important}.sp_mob=
+ile_text_align_left   .sp_text_headline   .sp_text_headline_desc{text-align=
+:left!important}.sp_mobile_text_align_left   .sp_table   table{text-align:l=
+eft!important}.sp_mobile_text_align_left   .sp_text_description{text-align:=
+left!important}.sp_mobile_text_align_left   .sp_button_wrapper{text-align:l=
+eft!important}.sp_mobile_text_align_left   .sp_button_wrapper_inner{text-al=
+ign:left!important;float:left!important;display:inline-block!important}.sp_=
+mobile_text_align_center   .sp_image_container{text-align:center!important}=
+.sp_mobile_text_align_center   .sp_text_title{text-align:center!important}.=
+sp_mobile_text_align_center   .sp_author_details{text-align:center!importan=
+t}.sp_mobile_text_align_center   .sp_author_details   td{text-align:center!=
+important}.sp_mobile_text_align_center   .sp_button_wrapper{text-align:cent=
+er!important}.sp_mobile_text_align_center   .sp_button_wrapper   td{text-al=
+ign:center!important}.sp_mobile_text_align_center   .sp_text_headline   .sp=
+_text_headline_title{text-align:center!important}.sp_mobile_text_align_cent=
+er   .sp_text_headline   .sp_text_headline_desc{text-align:center!important=
+}.sp_mobile_text_align_center   .sp_table   table{text-align:center!importa=
+nt}.sp_mobile_text_align_center   .sp_text_description{text-align:center!im=
+portant}.sp_mobile_text_align_center   .sp_button_wrapper{text-align:center=
+!important;line-height:0px!important}.sp_mobile_text_align_center   .sp_but=
+ton_wrapper   .sp_button_spacer{line-height:normal!important}.sp_mobile_tex=
+t_align_center   .sp_button_wrapper_inner{text-align:center!important;float=
+:none!important;display:inline-block!important;line-height:normal!important=
+}.sp_mobile_text_align_right   .sp_image_container{text-align:right!importa=
+nt}.sp_mobile_text_align_right   .sp_text_title{text-align:right!important}=
+.sp_mobile_text_align_right   .sp_author_details{text-align:right!important=
+}.sp_mobile_text_align_right   .sp_author_details   td{text-align:right!imp=
+ortant}.sp_mobile_text_align_right   .sp_button_wrapper{text-align:right!im=
+portant}.sp_mobile_text_align_right   .sp_button_wrapper   td{text-align:ri=
+ght!important}.sp_mobile_text_align_right   .sp_text_headline   .sp_text_he=
+adline_title{text-align:right!important}.sp_mobile_text_align_right   .sp_t=
+ext_headline   .sp_text_headline_desc{text-align:right!important}.sp_mobile=
+_text_align_right   .sp_table   table{text-align:right!important}.sp_mobile=
+_text_align_right   .sp_text_description{text-align:right!important}.sp_mob=
+ile_text_align_right   .sp_button_wrapper{text-align:right!important}.sp_mo=
+bile_text_align_right   .sp_button_wrapper_inner{text-align:right!important=
+;float:right!important;display:inline-block!important}}@media screen and (m=
+ax-width:500px){#spe   .sp_text_title{font-size:24px!important}#spe   .sp_t=
+ext_description{font-size:22px!important}}</STYLE>
+ 
+<DIV class=3D"sp_preheader" style=3D"color: rgb(255, 255, 255); line-height=
+: 1px; overflow: hidden; font-size: 1px; display: none !important; visibili=
+ty: hidden; max-height: 0px; max-width: 0px; opacity: 0; mso-hide: all;">- 
+And: Discover why the French economy might outperform its European peers. E=
+njoy 
+some of the top intelligence from Goldman Sachs. <SPAN 
+style=3D"font-size: 0px;">&nbsp;</SPAN></DIV>
+<DIV id=3D"spe"><!--[if gte mso 9]><style> ul.gsFlushList li { text-indent:=
+ -1em !important; Margin: 0 0 0 25px !important; } </style><![endif]--><!--=
+[if (gte mso 9)|(IE)]><style type=3D"text/css"> table { border-collapse: co=
+llapse; border-spacing: 0; } </style><![endif]-->
+<TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+  <TBODY>
+  <TR>
+    <TD class=3D"gsDarkModeBg" bgcolor=3D"#ffffff">
+      <DIV>
+      <DIV>
+      <DIV> 
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890307 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1365" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+*** ******** START: Header ************
+-->
+      <TABLE width=3D"100%" class=3D"gsHeaderBasicTable" border=3D"0" cells=
+pacing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD style=3D"padding: 20px 0px;">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px;">
+                        <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0=
+" 
+                        cellpadding=3D"0">
+                          <TBODY>
+                          <TR>
+                            <TD align=3D"left" class=3D"sp_image_wrapper gs=
+ContentWrapper gsImageWrapper" 
+                            valign=3D"top" style=3D"width: 35%;"> 
+                              <DIV class=3D"gsLightImg"><a style=3D"color: =
+rgb(24, 106, 222); font-weight: bold; text-decoration: none;" href=3D"https=
+://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41a6" target=3D"_blank"=
+><IMG 
+                              width=3D"84" style=3D"border: currentColor; b=
+order-image: none; width: 80px; display: block;" 
+                              src=3D"https://assets.storyports.com/pushproj=
+ect/u/737/images/18216600555.png"></A></DIV><!--[if !mso]><! --><!-- <div c=
+lass=3D"gsDarkImg" style=3D"display:none; overflow:hidden; float:left; widt=
+h:0px; max-height:0px; max-width:0px; line-height:0px; visibility:hidden;">=
+<a href=3D"#" target=3D"_blank"><img src=3D"https://assets.storyports.com/p=
+ushproject/u/737/images/92916600560.png" style=3D"border:none;display:block=
+;width:80px;" width=3D"80"></a></div> --><!--<![endif]--></TD>
+                            <TD align=3D"right" class=3D"sp_image_wrapper g=
+sContentWrapper gsImageWrapper gsImgMaxMobile" 
+                            style=3D"width: 65%;">
+                              <DIV class=3D"gsLightImg"><IMG width=3D"392" =
+class=3D"gsFullWidth" 
+                              style=3D"border: currentColor; border-image: =
+none; width: 388px; display: block;" 
+                              src=3D"https://assets.storyports.com/pushproj=
+ect/u/737/images/96216600555.png"></DIV><!--[if !mso]><! --><!-- <div class=
+=3D"gsDarkImg" style=3D"display:none; overflow:hidden; float:left; width:0p=
+x; max-height:0px; max-width:0px; line-height:0px; visibility:hidden;"><img=
+ src=3D"https://assets.storyports.com/pushproject/u/737/images/13216600560.=
+png" class=3D"gsFullWidth" style=3D"border:none;display:block;width:388px;"=
+ width=3D"388"></div> --><!--<![endif]--></TD></TR></TBODY></TABLE></TD></T=
+R></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- =
+ ******** END: Header ************  ********************************* --></=
+DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890343 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1367" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!-- 
+************************************* ******** START: Divider  ************=
+ -->
+      <TABLE width=3D"100%" class=3D"gsDividerTable" border=3D"0" cellspaci=
+ng=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px; height: 1px; line-height: 0px; font-size: 0px; backg=
+round-color: rgb(255, 255, 255);">
+                        <HR style=3D"background: rgb(208, 208, 208); margin=
+: 0px; padding: 0px; border: currentColor; border-image: none; height: 1px;=
+">
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE><!-- ******** End: Divider  *********
+******************************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1367" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1673631580 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1397" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Intro Paragraph - unitalicized  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'><SPAN 
+                        style=3D"font-size: 16px;">In today's edition:<BR><=
+/SPAN>
+                        <UL>
+                          <LI> <SPAN style=3D"font-size: 16px;">Find 
+                          out&nbsp;</SPAN><a style=3D"color: rgb(24, 106, 2=
+22); font-weight: bold; text-decoration: none;" href=3D"https://tracking.gs=
+.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41a7" target=3D"_blank" rel=3D"noopen=
+er noreferrer"><SPAN style=3D"font-size: 16px;">how 
+                          deadlock over the U.S. debt ceiling could affect 
+                          financial markets</SPAN></A>.<SPAN style=3D"font-=
+size: 16px;">&nbsp;(And&nbsp;</SPAN><a style=3D"color: rgb(24, 106, 222); f=
+ont-weight: bold; text-decoration: none;" href=3D"https://tracking.gs.com/r=
+/=3Fid=3Dh1f2e3e94,70fc1720,655e41a8" target=3D"_blank" rel=3D"noopener nor=
+eferrer"><SPAN style=3D"font-size: 16px;">test 
+                          your knowledge with a quiz</SPAN></A><SPAN style=
+=3D"font-size: 16px;">&nbsp;on 
+                          the subject.)</SPAN></LI>
+                          <LI><SPAN style=3D"font-size: 16px;">After the hi=
+ghs of 
+                          2022, could the&nbsp;</SPAN><a style=3D"color: rg=
+b(24, 106, 222); font-weight: bold; text-decoration: none;" href=3D"https:/=
+/tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41a9" target=3D"_blank" r=
+el=3D"noopener noreferrer"><SPAN style=3D"font-size: 16px;">U.S. 
+                          dollar be past its peak=3F</SPAN></A></LI>
+                          <LI><SPAN style=3D"font-size: 16px;">And&nbsp;</S=
+PAN><a style=3D"color: rgb(24, 106, 222); font-weight: bold; text-decoratio=
+n: none;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e=
+41aa" target=3D"_blank" rel=3D"noopener noreferrer"><SPAN style=3D"font-siz=
+e: 16px;">we 
+                          speak to the director-general of the 
+                          BBC</SPAN></A><SPAN 
+                          style=3D"font-size: 16px;">&nbsp;about how the U.=
+K's 
+                          national broadcaster is still evolving after more=
+ than 
+                          100 years.&nbsp;</SPAN></LI></UL><SPAN style=3D"f=
+ont-size: 17px;">(Was 
+                        this newsletter forwarded to you=3F <a style=3D"col=
+or: rgb(24, 106, 222); font-weight: bold; text-decoration: none;" href=3D"h=
+ttps://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41ab" target=3D"_bl=
+ank" rel=3D"noopener noreferrer">Sign up 
+                    now.</A>)</SPAN></TD></TR></TBODY></TABLE></TD></TR></T=
+BODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** End: Intro Paragraph -=
+ unitalicized  ********* ********************************** --></DIV></DIV>=
+</DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"940" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890343 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"940" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+***** ******** START: Divider  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsDividerTable" border=3D"0" cellspaci=
+ng=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px; height: 1px; line-height: 0px; font-size: 0px; backg=
+round-color: rgb(255, 255, 255);">
+                        <HR style=3D"background: rgb(208, 208, 208); margin=
+: 0px; padding: 0px; border: currentColor; border-image: none; height: 1px;=
+">
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE><!-- ******** End: Divider  ********* ************=
+******************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"640" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890509 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"978" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+****** ******** START: Headline  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsHeadlineTable" border=3D"0" cellspac=
+ing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsFullWidth" bor=
+der=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsHeadlineSmall gsTextOnW=
+hiteBg sp_priority_text gsTextHeadline" 
+                      style=3D'color: rgb(34, 38, 63); line-height: 30px; f=
+ont-family: Arial , "sans-serif" , "Basis"; font-size: 22px; font-weight: b=
+old;'>How 
+                        could the debt limit impasse impact equity 
+                      markets=3F&nbsp;</TD></TR></TBODY></TABLE></TD></TR><=
+/TBODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** END: Headline  *****=
+*******  ************************************ --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1068" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890594 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"3310" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Paragraph  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'> 
+                        <SPAN style=3D"font-size: 16px;">If previous episod=
+es are 
+                        any guide, the&nbsp;</SPAN><a style=3D"color: rgb(2=
+4, 106, 222); font-weight: bold; text-decoration: none;" href=3D"https://tr=
+acking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41ac" target=3D"_blank" rel=
+=3D"noopener noreferrer"><SPAN style=3D"font-size: 16px;">wrangling 
+                        over the U.S. debt ceiling could create uncertainty=
+ for 
+                        financial markets</SPAN></A><SPAN style=3D"font-siz=
+e: 16px;">, 
+                        according to Goldman Sachs Research.<BR><BR>The Tre=
+asury 
+                        Department was forced to begin taking special measu=
+res 
+                        last month to keep paying its obligations as the fe=
+deral 
+                        government bumped up against its $31.4 trillion 
+                        borrowing limit, setting the stage for a political 
+                        stand-off to raise the debt ceiling later this 
+                        year.<BR><BR><STRONG>David Kostin</STRONG>, the chi=
+ef 
+                        U.S. equity strategist in Goldman Sachs Research, s=
+ays 
+                        the current political environment shares some 
+                        similarities with 2011, when a debt-limit standoff 
+                        caused significant disruption. The S&amp;P 500 fell=
+ by 
+                        17% from peak to trough in just 22 trading days. 
+                        Volatility, as measured by the VIX Index, tripled. 
+                        Although the debt limit was raised on Aug. 2, 2011,=
+ 
+                        equity markets didn't reach their trough until Aug.=
+ 8, 
+                        2011, following the Standard &amp; Poor's downgrade=
+ of 
+                        the U.S. sovereign debt rating from AAA to 
+                        AA+.</SPAN><BR><BR><SPAN 
+                        style=3D"font-size: 16px;">Typically though, these =
+events 
+                        only have a limited impact on equities, Kostin says=
+. The 
+                        S&amp;P 500 had a median peak-to-trough decline of =
+just 
+                        4% in the last five episodes, with none besides 201=
+1 
+                        triggering a drop of even 5%.<BR><BR>That said, sto=
+cks 
+                        with a higher exposure to government spending tend =
+to be 
+                        more vulnerable, according to Kostin. A basket of 7=
+7 
+                        stocks tracked by Goldman Sachs analysts with at le=
+ast 
+                        20% of their sales tied to government spending has 
+                        lagged the S&amp;P 500 by a median of five percenta=
+ge 
+                        points in the weeks ahead of the four most recent 
+                        debt-limit deadlines. The basket consists primarily=
+ of 
+                        stocks from the health care, aerospace and defense,=
+ 
+                        professional services, and materials industries. 
+                        <BR></SPAN> 
+        </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE><!-- ******** End: Paragraph  ********* ************************=
+********** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1250" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  *********
+************************************ --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890831 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1068" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+*** ******** START: Image *************
+-->
+      <TABLE width=3D"100%" class=3D"gsImageTable" border=3D"0" cellspacing=
+=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"sp_image_wrapper gsContentWrapper gsImag=
+eWrapper"><a style=3D"color: rgb(24, 106, 222); font-weight: bold; text-dec=
+oration: none;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc172=
+0,655e41ad" target=3D"_blank"><IMG width=3D"580" height=3D"413" class=3D"gs=
+FullWidth" 
+                        style=3D"border: currentColor; border-image: none; =
+width: 580px; height: 413px; display: block;" 
+                        src=3D"https://assets.storyports.com/pushproject/u/=
+737/images/17916753567.jpg"></A></TD></TR></TBODY></TABLE></TD></TR></TBODY=
+></TABLE></TD></TR></TBODY></TABLE><!--  ******** END: Image ************* =
+ ********************************* --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1250" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890343 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1068" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+***** ******** START: Divider  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsDividerTable" border=3D"0" cellspaci=
+ng=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px; height: 1px; line-height: 0px; font-size: 0px; backg=
+round-color: rgb(255, 255, 255);">
+                        <HR style=3D"background: rgb(208, 208, 208); margin=
+: 0px; padding: 0px; border: currentColor; border-image: none; height: 1px;=
+">
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE><!-- ******** End: Divider  ********* ************=
+******************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"640" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890509 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1265" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+****** ******** START: Headline  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsHeadlineTable" border=3D"0" cellspac=
+ing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsFullWidth" bor=
+der=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsHeadlineSmall gsTextOnW=
+hiteBg sp_priority_text gsTextHeadline" 
+                      style=3D'color: rgb(34, 38, 63); line-height: 30px; f=
+ont-family: Arial , "sans-serif" , "Basis"; font-size: 22px; font-weight: b=
+old;'>Why 
+                        the US dollar may be past its 
+                  peak&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></T=
+ABLE></TD></TR></TBODY></TABLE><!-- ******** END: Headline  ************  *=
+*********************************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1068" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890594 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1265" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Paragraph  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'> 
+                        <SPAN style=3D"font-size: 16px;">The U.S. dollar ma=
+y have 
+                        soared against other major currencies in 2022, 
+                        but&nbsp;</SPAN><a style=3D"color: rgb(24, 106, 222=
+); font-weight: bold; text-decoration: none;" href=3D"https://tracking.gs.c=
+om/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41ae" target=3D"_blank" rel=3D"noopener=
+ noreferrer"><SPAN style=3D"font-size: 16px;">the 
+                        greenback is likely past its peak</SPAN></A><SPAN s=
+tyle=3D"font-size: 16px;">, 
+                        according to <STRONG>Kamakshya Trivedi</STRONG>, th=
+e 
+                        head of currencies, interest rates and emerging mar=
+kets 
+                        strategy in Goldman Sachs Research.<BR><BR></SPAN><=
+SPAN 
+                        style=3D"font-size: 16px;">During our&nbsp;</SPAN><=
+a style=3D"color: rgb(24, 106, 222); font-weight: bold; text-decoration: no=
+ne;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41af"=
+ target=3D"_blank" rel=3D"noopener noreferrer"><SPAN style=3D"font-size: 16=
+px;">31st 
+                        annual Global Strategy Conference</SPAN></A>&nbsp;<=
+SPAN 
+                        style=3D"font-size: 16px;">in London last 
+                        month</SPAN><SPAN style=3D"font-size: 16px;">, Triv=
+edi 
+                        said the prospect of lower headline inflation, a le=
+ss 
+                        aggressive Federal Reserve hiking cycle and an impr=
+oving 
+                        growth outlook in regions such as China and Europe,=
+ 
+                        create a =93very negative mix=94 of news for the U.=
+S. 
+                        dollar.<BR></SPAN> 
+            </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR><=
+/TBODY></TABLE><!-- ******** End: Paragraph  ********* ********************=
+************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1250" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  *********
+************************************ --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890831 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1250" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+*** ******** START: Image *************
+-->
+      <TABLE width=3D"100%" class=3D"gsImageTable" border=3D"0" cellspacing=
+=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"sp_image_wrapper gsContentWrapper gsImag=
+eWrapper"><a style=3D"color: rgb(24, 106, 222); font-weight: bold; text-dec=
+oration: none;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc172=
+0,655e41b0" target=3D"_blank"><IMG width=3D"580" height=3D"420" class=3D"gs=
+FullWidth" 
+                        style=3D"border: currentColor; border-image: none; =
+width: 580px; height: 420px; display: block;" 
+                        src=3D"https://assets.storyports.com/pushproject/u/=
+737/images/54116753407.jpg"></A></TD></TR></TBODY></TABLE></TD></TR></TBODY=
+></TABLE></TD></TR></TBODY></TABLE><!--  ******** END: Image ************* =
+ ********************************* --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1250" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658931168 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1525" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Image Caption  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'>
+                        <DIV style=3D"text-align: center;"><SPAN style=3D"f=
+ont-size: 11px;"><EM>Goldman 
+                        Sachs' Kamakshya Trivedi at the Global Strategy 
+                        Conference</EM></SPAN></DIV></TD></TR></TBODY></TAB=
+LE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** End: I=
+mage Caption  ********* ********************************** --> 
+      </DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1525" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890594 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1250" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Paragraph  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'><SPAN 
+                        style=3D"font-size: 16px;">=93We think the dollar h=
+as 
+                        peaked,=94 Trivedi says. =93We don't think we are g=
+oing to 
+                        revisit the highs in the dollar you saw at the peak=
+ of 
+                        the U.K. fiscal fears last year=85Even with the dol=
+lar 
+                        depreciation that you have seen so far from its pea=
+k, 
+                        the dollar remains a pretty overvalued asset. There=
+ is a 
+                        fair amount of overvaluation to 
+                        unwind.=94<BR>&nbsp;<BR>For the dollar to continue 
+                        declining, there will need to be a sustained shift =
+in 
+                        capital flows away from dollar assets towards those=
+ in 
+                        Europe and the rest of the world, Trivedi adds. =93=
+It's 
+                        barely started. That needs to go a lot further for 
+                        further strength in the euro [and] weakness in the 
+                        dollar.=94<BR>&nbsp;<BR>The U.S. currency could sti=
+ll have 
+                        a second wind, Trivedi says. He doesn't expect a U.=
+S. 
+                        recession or that the Fed will necessarily have to =
+cut 
+                        interest rates in the later part of 2023. However, =
+it 
+                        will probably take time and evidence of resilient g=
+rowth 
+                        for the market to align with that view, he says. =
+=93The 
+                        U.S. economy is also more resilient to the interest=
+ rate 
+                        hikes delivered in other parts of the world, so you=
+ 
+                        might see phases of dollar strength over the next t=
+hree 
+                        to six 
+              months.=94<BR></SPAN></TD></TR></TBODY></TABLE></TD></TR></TB=
+ODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** End: Paragraph  *******=
+** ********************************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1265" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890343 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"3735" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+***** ******** START: Divider  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsDividerTable" border=3D"0" cellspaci=
+ng=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px; height: 1px; line-height: 0px; font-size: 0px; backg=
+round-color: rgb(255, 255, 255);">
+                        <HR style=3D"background: rgb(208, 208, 208); margin=
+: 0px; padding: 0px; border: currentColor; border-image: none; height: 1px;=
+">
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE><!-- ******** End: Divider  ********* ************=
+******************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1250" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890509 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"856" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+****** ******** START: Headline  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsHeadlineTable" border=3D"0" cellspac=
+ing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsFullWidth" bor=
+der=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsHeadlineSmall gsTextOnW=
+hiteBg sp_priority_text gsTextHeadline" 
+                      style=3D'color: rgb(34, 38, 63); line-height: 30px; f=
+ont-family: Arial , "sans-serif" , "Basis"; font-size: 22px; font-weight: b=
+old;'>Could 
+                        France outperform its European 
+                  peers=3F&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY=
+></TABLE></TD></TR></TBODY></TABLE><!-- ******** END: Headline  ***********=
+*  ************************************ --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"878" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890594 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"2545" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Paragraph  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'> 
+                        <SPAN style=3D"font-size: 16px;">France's economy i=
+s 
+                        expected to have a&nbsp;</SPAN><a style=3D"color: r=
+gb(24, 106, 222); font-weight: bold; text-decoration: none;" href=3D"https:=
+//tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41b1" target=3D"_blank" =
+rel=3D"noopener noreferrer"><SPAN style=3D"font-size: 16px;">period 
+                        of weakness this year, but the country will narrowl=
+y 
+                        avoid a recession</SPAN></A><SPAN style=3D"font-siz=
+e: 16px;">, 
+                        according to Goldman Sachs Research.<BR><BR>Data 
+                        revealed that French GDP expanded in the final quar=
+ter 
+                        of 2022, but three factors could be crucial to the 
+                        country's economic performance in 2023: 
+                    </SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TA=
+BLE></TD></TR></TBODY></TABLE><!-- ******** End: Paragraph  ********* *****=
+***************************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1397" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890831 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1299" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+*** ******** START: Image *************
+-->
+      <TABLE width=3D"100%" class=3D"gsImageTable" border=3D"0" cellspacing=
+=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD width=3D"577" class=3D"sp_image_wrapper gsContent=
+Wrapper gsImageWrapper"><a style=3D"color: rgb(24, 106, 222); font-weight: =
+bold; text-decoration: none;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f=
+2e3e94,70fc1720,655e41b2" target=3D"_blank"><IMG width=3D"577" height=3D"37=
+0" class=3D"gsFullWidth" 
+                        style=3D"border: currentColor; border-image: none; =
+width: 577px; height: 370px; display: block;" 
+                        src=3D"https://assets.storyports.com/pushproject/u/=
+737/images/74116754263.jpg"></A></TD></TR></TBODY></TABLE></TD></TR></TBODY=
+></TABLE></TD></TR></TBODY></TABLE><!--  ******** END: Image ************* =
+ ********************************* --> 
+      </DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1397" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890594 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1299" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Paragraph  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'>
+                        <OL>
+                          <LI> <STRONG><SPAN 
+                          style=3D"font-size: 16px;">Energy</SPAN></STRONG>=
+<SPAN 
+                          style=3D"font-size: 16px;">: France is less expos=
+ed than 
+                          other European countries to the continent's energ=
+y 
+                          crisis because its economic growth is less relian=
+t on 
+                          industrial production (and, thus, gas) for growth=
+ and 
+                          is not as dependent on Russia for the gas. =93The=
+ 
+                          natural hedge of a diversified economy, lower exp=
+osure 
+                          to gas and strong fiscal support,=94 underlie the=
+ 
+                          Goldman Sachs Research view for France to outperf=
+orm 
+                          its European peers.<BR><BR></SPAN></LI>
+                          <LI><SPAN 
+                          style=3D"font-size: 16px;"><STRONG>Inflation</STR=
+ONG>: 
+                          Consumer inflation in France was among the lowest=
+ of 
+                          the EU countries in 2022, due in part to signific=
+ant 
+                          fiscal support. But as 2023 arrives, several fact=
+ors 
+                          are skewing inflation risks to the upside. For on=
+e, 
+                          the energy price caps that proved so effective la=
+st 
+                          year in limiting gas and electricity inflation ar=
+e 
+                          increasing at the beginning of this year. 
+                          Additionally, 2023 also brings a 1.8% increase in=
+ the 
+                          minimum wage, affecting about 15% of the country'=
+s 
+                          labor force. <BR><BR></SPAN></LI>
+                          <LI><SPAN style=3D"font-size: 16px;"><STRONG>Gove=
+rnment 
+                          intervention:</STRONG> France's government is =93=
+walking 
+                          a narrow fiscal path=94 with a number of factors =
+in the 
+                          coming year that could =93catalyze a re-focusing =
+of 
+                          investors on French fiscal issues,=94 according t=
+o 
+                          Goldman Sachs Research. For example, the governme=
+nt's 
+                          budget includes growth expectations of 1.0% for 2=
+023, 
+                          which is currently above consensus. The way the 
+                          government reacts to consumer inflation could lea=
+d to 
+                          a larger primary deficit if price growth surprise=
+s to 
+                          the upside. Moreover, the French government could=
+ face 
+                          pushback from the European Commission and other m=
+ember 
+                          states on the European Council on its above-conse=
+nsus 
+                          growth projections. They could force it to downgr=
+ade 
+                          those projections and plan for more aggressive ef=
+forts 
+                          to address debt 
+                    accumulation.</SPAN></LI></OL></TD></TR></TBODY></TABLE=
+></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** End: Par=
+agraph  ********* ********************************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1068" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  *********
+************************************ --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890343 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1203" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+***** ******** START: Divider  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsDividerTable" border=3D"0" cellspaci=
+ng=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px; height: 1px; line-height: 0px; font-size: 0px; backg=
+round-color: rgb(255, 255, 255);">
+                        <HR style=3D"background: rgb(208, 208, 208); margin=
+: 0px; padding: 0px; border: currentColor; border-image: none; height: 1px;=
+">
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE><!-- ******** End: Divider  ********* ************=
+******************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1068" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890509 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1299" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+****** ******** START: Headline  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsHeadlineTable" border=3D"0" cellspac=
+ing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsFullWidth" bor=
+der=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsHeadlineSmall gsTextOnW=
+hiteBg sp_priority_text gsTextHeadline" 
+                      style=3D'color: rgb(34, 38, 63); line-height: 30px; f=
+ont-family: Arial , "sans-serif" , "Basis"; font-size: 22px; font-weight: b=
+old;'>Giving 
+                        employees a bigger ownership stake can boost 
+                    returns</TD></TR></TBODY></TABLE></TD></TR></TBODY></TA=
+BLE></TD></TR></TBODY></TABLE><!-- ******** END: Headline  ************  **=
+********************************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1068" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658891733 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"3310" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+*** ******** START: Video Image *************
+-->
+      <TABLE width=3D"100%" class=3D"gsImageTable" border=3D"0" cellspacing=
+=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"sp_image_wrapper gsContentWrapper gsImag=
+eWrapper"><a style=3D"color: rgb(24, 106, 222); font-weight: bold; text-dec=
+oration: none;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc172=
+0,655e41b3" target=3D"_blank"><IMG width=3D"580" height=3D"327" class=3D"gs=
+FullWidth" 
+                        style=3D"border: currentColor; border-image: none; =
+width: 580px; height: 327px; display: block;" 
+                        src=3D"https://assets.storyports.com/pushproject/u/=
+737/images/65016753734.png"></A></TD></TR></TBODY></TABLE></TD></TR></TBODY=
+></TABLE></TD></TR></TBODY></TABLE><!--  ******** END: Video Image ********=
+*****  ********************************* --> 
+      </DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1068" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658931168 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"3310" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Image Caption  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'>
+                        <DIV style=3D"text-align: center;"><SPAN style=3D"f=
+ont-size: 11px;"><EM>Above 
+                        (L to R): Pete Stavros of KKR and Alison Mass of Go=
+ldman 
+                        Sachs</EM></SPAN></DIV><BR></TD></TR></TBODY></TABL=
+E></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** End: Im=
+age Caption  ********* ********************************** --> 
+      </DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890594 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1299" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Paragraph  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'> 
+                        <SPAN style=3D"font-size: 16px;">Investment firm KK=
+R has 
+                        seen promising results from employee ownership prog=
+rams 
+                        in its portfolio companies. On a recent episode 
+                        of&nbsp;</SPAN><a style=3D"color: rgb(24, 106, 222)=
+; font-weight: bold; text-decoration: none;" href=3D"https://tracking.gs.co=
+m/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41b4" target=3D"_blank" rel=3D"noopener =
+noreferrer"><SPAN style=3D"font-size: 16px;">Exchanges 
+                        at Goldman Sachs: Great Investors</SPAN></A><SPAN s=
+tyle=3D"font-size: 16px;">, 
+                        <STRONG>Pete Stavros</STRONG>, co-head of Americas 
+                        private equity at KKR, describes how an employee 
+                        ownership model is creating wealth for workers whil=
+e 
+                        generating some of the highest returns for KKR in 
+                        decades.<BR><BR><STRONG>Employee ownership is 
+                        growing.</STRONG> When KKR bought garage door 
+                        manufacturer C.H.I. Overhead Doors in 2015, only a =
+small 
+                        sliver of the employees held equity ownership in th=
+e 
+                        company. Over the next seven and a half years, KKR 
+                        expanded ownership levels to all of C.H.I.'s nearly=
+ 
+                        1,000 employees =97 all of whom got substantial cas=
+h 
+                        payouts when the company was sold to Nucor Corp. la=
+st 
+                        year. As a result of the ownership culture, =93we s=
+tarted 
+                        measuring employee engagement, acting on the feedba=
+ck 
+                        that we got, delegating decision-making rights to 
+                        workers,=94 Stavros says. =93So we built a health c=
+linic. We 
+                        built an on-site cafeteria. We built new break room=
+s=85We 
+                        were able to reduce scrap. We were able to drive 
+                        inventory down, drive labor productivity in the pla=
+nt, 
+                        increase the efficiency of the routes our truck dri=
+vers 
+                        drove.=94<BR><BR>For KKR, the sale generated the 
+                        <STRONG>highest return in 30 years</STRONG>. =93Whe=
+n we 
+                        sold the business, we made 10 times our money for o=
+ur 
+                        investors,=94 Stavros says. =93Workers made hundred=
+s of 
+                        millions of dollars. We had truck drivers make almo=
+st a 
+                        million dollars, factory workers make six and a hal=
+f 
+                        times their annual income. It was a real win across=
+ 
+                        every dimension.=94<BR><BR>Stavros attributes his 
+                        <STRONG>=93human capital-oriented approach to 
+                        investing=94</STRONG> to hearing stories from his f=
+ather, 
+                        who worked in construction, about the lack of align=
+ment 
+                        between workers and employers. =93My dad, being in =
+a union 
+                        and us living through a lot of worker strife and 
+                        strikes, certainly led to a real appreciation of th=
+e 
+                        importance of labor relations,=94 he says. =93You w=
+ant more 
+                        hours because you get paid for every hour you work,=
+ and 
+                        your employer wants to control labor costs so they =
+want 
+                        fewer hours.=94</SPAN><BR><BR><a style=3D"color: rg=
+b(24, 106, 222); font-weight: bold; text-decoration: none;" href=3D"https:/=
+/tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41b5" target=3D"_blank" r=
+el=3D"noopener noreferrer">Listen to the 
+                        full podcast.&nbsp;</A><SPAN 
+                        style=3D"font-size: 16px;"><BR></SPAN><BR></TD></TR=
+></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- *=
+******* End: Paragraph  ********* ********************************** --></D=
+IV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1299" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  *********
+************************************ --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890343 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1299" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+***** ******** START: Divider  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsDividerTable" border=3D"0" cellspaci=
+ng=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px; height: 1px; line-height: 0px; font-size: 0px; backg=
+round-color: rgb(255, 255, 255);">
+                        <HR style=3D"background: rgb(208, 208, 208); margin=
+: 0px; padding: 0px; border: currentColor; border-image: none; height: 1px;=
+">
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE><!-- ******** End: Divider  ********* ************=
+******************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1299" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890509 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1181" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+****** ******** START: Headline  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsHeadlineTable" border=3D"0" cellspac=
+ing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsFullWidth" bor=
+der=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsHeadlineSmall gsTextOnW=
+hiteBg sp_priority_text gsTextHeadline" 
+                      style=3D'color: rgb(34, 38, 63); line-height: 30px; f=
+ont-family: Arial , "sans-serif" , "Basis"; font-size: 22px; font-weight: b=
+old;'>After 
+                        more than 100 years of broadcasting, the BBC is sti=
+ll 
+                        evolving&nbsp;</TD></TR></TBODY></TABLE></TD></TR><=
+/TBODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** END: Headline  *****=
+*******  ************************************ --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"3735" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890594 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1181" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Paragraph  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'><SPAN 
+                        style=3D"font-size: 16px;">In an <a style=3D"color:=
+ rgb(24, 106, 222); font-weight: bold; text-decoration: none;" href=3D"http=
+s://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41b6" target=3D"_blank=
+">episode of Talks at GS</A>, <STRONG>Tim 
+                        Davie</STRONG>, the BBC's director-general, highlig=
+hts 
+                        how the U.K.'s national broadcaster is adapting to =
+two 
+                        significant challenges: rapid market change and the=
+ age 
+                        of rampant 
+              disinformation.</SPAN></TD></TR></TBODY></TABLE></TD></TR></T=
+BODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** End: Paragraph  ******=
+*** ********************************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"3735" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890831 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1397" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+*** ******** START: Image *************
+-->
+      <TABLE width=3D"100%" class=3D"gsImageTable" border=3D"0" cellspacing=
+=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD>
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"sp_image_wrapper gsContentWrapper gsImag=
+eWrapper"><a style=3D"color: rgb(24, 106, 222); font-weight: bold; text-dec=
+oration: none;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc172=
+0,655e41b7" target=3D"_blank"><IMG width=3D"580" height=3D"420" class=3D"gs=
+FullWidth" 
+                        style=3D"border: currentColor; border-image: none; =
+width: 580px; height: 420px; display: block;" 
+                        src=3D"https://assets.storyports.com/pushproject/u/=
+737/images/76916753444.jpg"></A></TD></TR></TBODY></TABLE></TD></TR></TBODY=
+></TABLE></TD></TR></TBODY></TABLE><!--  ******** END: Image ************* =
+ ********************************* --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"3735" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658931168 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1299" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Image Caption  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'>
+                        <DIV style=3D"text-align: center;"><SPAN style=3D"f=
+ont-size: 11px;"><EM>Above 
+                        (L to R): Anthony Gutman of Goldman Sachs and Tim D=
+avie 
+                        of the 
+              BBC</EM></SPAN></DIV></TD></TR></TBODY></TABLE></TD></TR></TB=
+ODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** End: Image Caption  ***=
+****** ********************************** --> 
+      </DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1299" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890594 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1181" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Paragraph  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'>
+                        <UL>
+                          <LI> <STRONG><SPAN 
+                          style=3D"font-size: 16px;">Disinformation poses a=
+ 
+                          =93massive=94 challenge.&nbsp;</SPAN></STRONG><SP=
+AN style=3D"font-size: 16px;">About 
+                          70% of the world's population no longer have acce=
+ss to 
+                          a fully free press, Davie tells Talks host 
+                          <STRONG>Anthony Gutman</STRONG>. =93It is a huge =
+fight,=94 
+                          he says. =93And a massive challenge. And we have =
+to 
+                          decide together, as societies and individuals, ho=
+w 
+                          we're going to sort this out. Because the trend l=
+ines 
+                          are terrible.=94 &nbsp;</SPAN></LI>
+                          <LI><SPAN style=3D"font-size: 16px;"><STRONG>The =
+speed 
+                          of market change is =93unforgiving.=94&nbsp;</STR=
+ONG>For 
+                          more than 100 years, the BBC has entertained and 
+                          informed audiences around the world. But the emer=
+gence 
+                          of competitors like Netflix and TikTok has undoub=
+tedly 
+                          transformed the broadcasting and digital landscap=
+e. 
+                          Davie says his focus isn't on beating rivals, but=
+ 
+                          about being distinctive and differentiated. =93I'=
+m not 
+                          trying to chase every opportunity. I've got to fo=
+cus,=94 
+                          he says. =93The instinct is, and the BBC has done=
+ a bit 
+                          of it in the past, let's just go wide and wide to=
+ 
+                          cover off every base, every community. No. Focus =
+on 
+                          where we're utterly different.=94 
+                    <BR></SPAN></LI></UL></TD></TR></TBODY></TABLE></TD></T=
+R></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** End: Paragraph  *=
+******** ********************************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1299" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890343 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1781" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+***** ******** START: Divider  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsDividerTable" border=3D"0" cellspaci=
+ng=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px; height: 1px; line-height: 0px; font-size: 0px; backg=
+round-color: rgb(255, 255, 255);">
+                        <HR style=3D"background: rgb(208, 208, 208); margin=
+: 0px; padding: 0px; border: currentColor; border-image: none; height: 1px;=
+">
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE><!-- ******** End: Divider  ********* ************=
+******************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1781" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890509 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"2102" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+****** ******** START: Headline  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsHeadlineTable" border=3D"0" cellspac=
+ing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsFullWidth" bor=
+der=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsHeadlineSmall gsTextOnW=
+hiteBg sp_priority_text gsTextHeadline" 
+                      style=3D'color: rgb(34, 38, 63); line-height: 30px; f=
+ont-family: Arial , "sans-serif" , "Basis"; font-size: 22px; font-weight: b=
+old;'>Briefings 
+                        brainteaser: This isn't the first debt ceiling 
+                    saga</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE=
+></TD></TR></TBODY></TABLE><!-- ******** END: Headline  ************  *****=
+******************************* --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"2102" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"978" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890594 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"2102" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: Bulleted Paragraph  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsParagraphTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBody" 
+                      style=3D'color: rgb(0, 0, 0); font-family: Arial , "s=
+ans-serif" , "Basis"; font-size: 16px;'> 
+                        <SPAN style=3D"font-size: 16px;">Since 1960, how ma=
+ny 
+                        times has U.S. Congress raised, extended or revised=
+ the 
+                        debt limit=3F</SPAN><BR><BR><SPAN 
+                        style=3D"font-size: 16px;">A) 61</SPAN><BR><SPAN st=
+yle=3D"font-size: 16px;">B) 
+                        78</SPAN><BR><SPAN style=3D"font-size: 16px;">C) 
+                        84</SPAN><BR><SPAN style=3D"font-size: 16px;">D) 
+                        95</SPAN><BR><BR><a style=3D"color: rgb(24, 106, 22=
+2); font-weight: bold; text-decoration: none;" href=3D"https://tracking.gs.=
+com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41b8" target=3D"_blank" rel=3D"noopene=
+r noreferrer" alias=3D"">Check 
+                        your answer 
+            here.</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></=
+TD></TR></TBODY></TABLE><!-- ******** End: Bulleted Paragraph  ********* **=
+******************************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1068" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890343 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1367" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+***** ******** START: Divider  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsDividerTable" border=3D"0" cellspaci=
+ng=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px; height: 1px; line-height: 0px; font-size: 0px; backg=
+round-color: rgb(255, 255, 255);">
+                        <HR style=3D"background: rgb(208, 208, 208); margin=
+: 0px; padding: 0px; border: currentColor; border-image: none; height: 1px;=
+">
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE><!-- ******** End: Divider  ********* ************=
+******************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"878" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1367" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890509 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1367" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+****** ******** START: Headline  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsHeadlineTable" border=3D"0" cellspac=
+ing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsFullWidth" bor=
+der=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsHeadlineSmall gsTextOnW=
+hiteBg sp_priority_text gsTextHeadline" 
+                      style=3D'color: rgb(34, 38, 63); line-height: 30px; f=
+ont-family: Arial , "sans-serif" , "Basis"; font-size: 22px; font-weight: b=
+old;'>ICYMI: 
+                        In the 
+        media</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR>=
+</TBODY></TABLE><!-- ******** END: Headline  ************  ****************=
+******************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1068" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1068" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658892309 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1219" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: News Item  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsNewsItemTable" border=3D"0" cellspac=
+ing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsFullWidth gsDisplayBlock" valign=3D"to=
+p" style=3D"padding-right: 125px;">
+                        <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0=
+" 
+                        cellpadding=3D"0">
+                          <TBODY>
+                          <TR>
+                            <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_=
+html_block gsTextBodySubText" 
+                            style=3D'color: rgb(107, 107, 107); line-height=
+: 13px; padding-bottom: 5px; font-family: Arial , "sans-serif" , "Basis"; f=
+ont-size: 12px;'> 
+                              <a style=3D"color: rgb(24, 106, 222); font-we=
+ight: bold; text-decoration: none;" href=3D"https://tracking.gs.com/r/=3Fid=
+=3Dh1f2e3e94,70fc1720,655e41b9" target=3D"_blank" rel=3D"noopener noreferre=
+r"><SPAN 
+                              style=3D"font-size: 15px;">Bloomberg</SPAN></=
+A>&nbsp;<SPAN 
+                              style=3D"font-size: 14px;">February 2</SPAN><=
+/TD></TR>
+                          <TR>
+                            <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_=
+html_block gsTextBody" 
+                            style=3D'color: rgb(0, 0, 0); line-height: 20px=
+; font-family: Arial , "sans-serif" , "Basis"; font-size: 16px;'><a class=
+=3D"gsTextOnWhiteBg" style=3D"color: rgb(0, 0, 0); font-weight: normal; tex=
+t-decoration: none;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70=
+fc1720,655e41ba" target=3D"_blank" rel=3D"noopener noreferrer"><SPAN 
+                              style=3D"font-size: 16px;">Goldman Sachs' Moe=
+ on 
+                              Market Strategy</SPAN></A>&nbsp;<SPAN style=
+=3D"font-size: 14px;">(11:10)</SPAN></TD></TR></TBODY></TABLE></TD></TR></T=
+BODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- *****=
+*** End: News Item  ********* **********************************
+--></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1250" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658892309 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1219" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: News Item  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsNewsItemTable" border=3D"0" cellspac=
+ing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsFullWidth gsDisplayBlock" valign=3D"to=
+p" style=3D"padding-right: 125px;">
+                        <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0=
+" 
+                        cellpadding=3D"0">
+                          <TBODY>
+                          <TR>
+                            <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_=
+html_block gsTextBodySubText" 
+                            style=3D'color: rgb(107, 107, 107); line-height=
+: 13px; padding-bottom: 5px; font-family: Arial , "sans-serif" , "Basis"; f=
+ont-size: 12px;'> 
+                              <a style=3D"color: rgb(24, 106, 222); font-we=
+ight: bold; text-decoration: none;" href=3D"https://tracking.gs.com/r/=3Fid=
+=3Dh1f2e3e94,70fc1720,655e41bb" target=3D"_blank" rel=3D"noopener noreferre=
+r"><SPAN 
+                              style=3D"font-size: 15px;">Investment 
+                              Week</SPAN>&nbsp;</A>February <SPAN style=3D"=
+font-size: 14px;">1</SPAN></TD></TR>
+                          <TR>
+                            <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_=
+html_block gsTextBody" 
+                            style=3D'color: rgb(0, 0, 0); line-height: 20px=
+; font-family: Arial , "sans-serif" , "Basis"; font-size: 16px;'><a class=
+=3D"gsTextOnWhiteBg" style=3D"color: rgb(0, 0, 0); font-weight: normal; tex=
+t-decoration: none;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70=
+fc1720,655e41bc" target=3D"_blank" rel=3D"noopener noreferrer"><SPAN 
+                              style=3D"font-size: 16px;">Opinion: Breakthro=
+ughs 
+                              and bargains reveal value in 
+                          biotech</SPAN></A></TD></TR></TBODY></TABLE></TD>=
+</TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!=
+-- ******** End: News Item  ********* ********************************** --=
+> 
+      </DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1250" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658892309 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1219" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******* ******** START: News Item  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsNewsItemTable" border=3D"0" cellspac=
+ing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsFullWidth gsDisplayBlock" valign=3D"to=
+p" style=3D"padding-right: 125px;">
+                        <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0=
+" 
+                        cellpadding=3D"0">
+                          <TBODY>
+                          <TR>
+                            <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_=
+html_block gsTextBodySubText" 
+                            style=3D'color: rgb(107, 107, 107); line-height=
+: 13px; padding-bottom: 5px; font-family: Arial , "sans-serif" , "Basis"; f=
+ont-size: 12px;'> 
+                              <a style=3D"color: rgb(24, 106, 222); font-we=
+ight: bold; text-decoration: none;" href=3D"https://tracking.gs.com/r/=3Fid=
+=3Dh1f2e3e94,70fc1720,655e41bd" target=3D"_blank" rel=3D"noopener noreferre=
+r"><SPAN 
+                              style=3D"font-size: 15px;">Bloomberg</SPAN>&n=
+bsp;</A><SPAN 
+                              style=3D"font-size: 14px;">January 27</SPAN><=
+/TD></TR>
+                          <TR>
+                            <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_=
+html_block gsTextBody" 
+                            style=3D'color: rgb(0, 0, 0); line-height: 20px=
+; font-family: Arial , "sans-serif" , "Basis"; font-size: 16px;'><a class=
+=3D"gsTextOnWhiteBg" style=3D"color: rgb(0, 0, 0); font-weight: normal; tex=
+t-decoration: none;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70=
+fc1720,655e41be" target=3D"_blank" rel=3D"noopener noreferrer"><SPAN 
+                              style=3D"font-size: 16px;">Goldman's Oppenhei=
+mer 
+                              says European recession 'isn't 
+                              happening'</SPAN></A>&nbsp;<SPAN style=3D"fon=
+t-size: 14px;">(2:14)</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></T=
+ABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** End:=
+ News Item  *********
+********************************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1397" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"752" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"785" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1070" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658898161 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1348" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 10  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"10" align=3D"center" class=3D"gsSpacer10" style=3D"=
+height: 10px; line-height: 10px; font-size: 10px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 10  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1367" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890343 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1367" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+***** ******** START: Divider  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsDividerTable" border=3D"0" cellspaci=
+ng=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px; height: 1px; line-height: 0px; font-size: 0px; backg=
+round-color: rgb(255, 255, 255);">
+                        <HR style=3D"background: rgb(208, 208, 208); margin=
+: 0px; padding: 0px; border: currentColor; border-image: none; height: 1px;=
+">
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE><!-- ******** End: Divider  ********* ************=
+******************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658892723 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"1407" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********** ******** START: Footer Banner ************
+-->
+      <TABLE width=3D"100%" class=3D"gsTwoColImageTable" border=3D"0" cells=
+pacing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD style=3D"padding: 20px 0px;">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px;">
+                        <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0=
+" 
+                        cellpadding=3D"0">
+                          <TBODY>
+                          <TR>
+                            <TD align=3D"left" class=3D"sp_image_wrapper gs=
+ContentWrapper gsImageWrapper"> 
+                              <DIV class=3D"gsLightImg"><a style=3D"color: =
+rgb(24, 106, 222); font-weight: bold; text-decoration: none;" href=3D"https=
+://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41bf" target=3D"_blank"=
+><IMG 
+                              width=3D"60" height=3D"25" style=3D"border: c=
+urrentColor; border-image: none; width: 60px; height: 25px; display: block;=
+" 
+                              src=3D"https://assets.storyports.com/pushproj=
+ect/u/737/images/89816589278.jpg"></A></DIV><!--[if !mso]><! -->
+                              <DIV class=3D"gsDarkImg" style=3D"width: 0px;=
+ line-height: 0px; overflow: hidden; float: left; display: none; visibility=
+: hidden; max-height: 0px; max-width: 0px;"><a style=3D"color: rgb(24, 106,=
+ 222); font-weight: bold; text-decoration: none;" href=3D"https://tracking.=
+gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41c0" target=3D"_blank"><IMG 
+                              width=3D"60" height=3D"25" style=3D"border: c=
+urrentColor; border-image: none; width: 60px; height: 25px; display: block;=
+" 
+                              src=3D"http://assets.storyports.com/pushproje=
+ct/u/2812/images/96916457791.png"></A></DIV><!--<![endif]--></TD>
+                            <TD align=3D"right" class=3D"sp_image_wrapper g=
+sContentWrapper gsImageWrapper">
+                              <DIV class=3D"gsLightImg"><IMG width=3D"195" =
+height=3D"28" 
+                              style=3D"border: currentColor; border-image: =
+none; width: 195px; height: 28px; display: block;" 
+                              src=3D"https://assets.storyports.com/pushproj=
+ect/u/2812/images/42816521618.png"></DIV><!--[if !mso]><! -->
+                              <DIV class=3D"gsDarkImg" style=3D"width: 0px;=
+ line-height: 0px; overflow: hidden; float: left; display: none; visibility=
+: hidden; max-height: 0px; max-width: 0px;"><IMG 
+                              width=3D"195" height=3D"28" style=3D"border: =
+currentColor; border-image: none; width: 195px; height: 28px; display: bloc=
+k;" 
+                              src=3D"https://assets.storyports.com/pushproj=
+ect/u/2857/images/32916524138.png"></DIV><!--<![endif]--></TD></TR></TBODY>=
+</TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBO=
+DY></TABLE><!--  ******** END: Footer Banner ************  ****************=
+************************ --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890343 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+***** ******** START: Divider  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsDividerTable" border=3D"0" cellspaci=
+ng=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px; height: 1px; line-height: 0px; font-size: 0px; backg=
+round-color: rgb(255, 255, 255);">
+                        <HR style=3D"background: rgb(208, 208, 208); margin=
+: 0px; padding: 0px; border: currentColor; border-image: none; height: 1px;=
+">
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE><!-- ******** End: Divider  ********* ************=
+******************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658892893 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+******** ******** START: Footer  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsPrefooterTable" border=3D"0" cellspa=
+cing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD align=3D"left" class=3D"gsTextOnWhiteBg sp_html_b=
+lock gsTextBodySubText" 
+                      style=3D'color: rgb(62, 84, 99); font-family: Arial ,=
+ "sans-serif" , "Basis"; font-size: 12px;'>Some 
+                        of the images used in this newsletter are sourced v=
+ia 
+                        Getty Images. The data provided in this newsletter =
+is 
+                        for information purposes only and should not be 
+                        construed as investment or tax advice nor as a 
+                        recommendation to buy, sell, or hold any particular=
+ 
+                        security. Goldman Sachs believes the data in this 
+                        newsletter is accurate, but does not verify its acc=
+uracy 
+                        independently and does not warrant or guarantee tha=
+t it 
+                        is accurate or complete. Goldman Sachs has no oblig=
+ation 
+                        to provide any updates or changes to the data. No 
+                        investment decisions should be made using this 
+                        data.<BR><BR>To the extent this newsletter includes=
+ 
+                        material from Goldman Sachs Global Banking &amp; 
+                        Markets, please <a style=3D"color: rgb(24, 106, 222=
+); font-weight: bold; text-decoration: underline;" href=3D"https://tracking=
+.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41c1" target=3D"_blank" rel=3D"noo=
+pener noreferrer">click here</A> 
+                        for information relating to Goldman Sachs Global Ba=
+nking 
+                        &amp; Markets material and your reliance on 
+                        it.<BR><BR>To the extent this newsletter includes 
+                        material from Goldman Sachs Asset Management, pleas=
+e <a style=3D"color: rgb(24, 106, 222); font-weight: bold; text-decoration:=
+ underline;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,6=
+55e41c2" target=3D"_blank" rel=3D"noopener noreferrer">click here</A> 
+                        for additional disclosures.<BR><BR><a style=3D"colo=
+r: rgb(24, 106, 222); font-weight: bold; text-decoration: underline;" href=
+=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41c3&e=3DcDE9Z=
+29kbmFtdTEyMTNAZ21haWwuY29t&s=3Di_lJjPwlluwj5M5AtyZe7OjH4aMuLdDRA5JZX8ZeO1Q=
+" target=3D"_blank" rel=3D"noopener noreferrer">Click here</A> 
+                        to unsubscribe.<BR><BR>=A9 2023 Goldman Sachs, All =
+rights 
+                        reserved.<BR>200 West Street, New York, NY 10282, 
+                    USA</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>=
+</TD></TR></TBODY></TABLE><!-- ******** End: Footer  ********* ************=
+*********************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module" style=3D"display: block;">
+      <DIV>
+      <DIV class=3D" type_1658890343 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+***** ******** START: Divider  ************
+-->
+      <TABLE width=3D"100%" class=3D"gsDividerTable" border=3D"0" cellspaci=
+ng=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD align=3D"center">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR>
+                      <TD class=3D"gsContentWrapper gsBodyPadding30" style=
+=3D"padding: 0px 30px; height: 1px; line-height: 0px; font-size: 0px; backg=
+round-color: rgb(255, 255, 255);">
+                        <HR style=3D"background: rgb(208, 208, 208); margin=
+: 0px; padding: 0px; border: currentColor; border-image: none; height: 1px;=
+">
+                      </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><=
+/TD></TR></TBODY></TABLE><!-- ******** End: Divider  ********* ************=
+******************** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658893021 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********** ******** START: Footer Links  ************ -->
+      <TABLE width=3D"100%" class=3D"gsFooterLinksTable" border=3D"0" cells=
+pacing=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD align=3D"center">
+            <TABLE width=3D"640" align=3D"center" class=3D"gsContentWidth" =
+border=3D"0" 
+            cellspacing=3D"0" cellpadding=3D"0">
+              <TBODY>
+              <TR>
+                <TD class=3D"gsContentWrapper gsBodyPadding30" style=3D"pad=
+ding: 0px 30px;">
+                  <TABLE width=3D"100%" border=3D"0" cellspacing=3D"0" 
+cellpadding=3D"0">
+                    <TBODY>
+                    <TR> 
+                      <TD align=3D"left" class=3D"gsFullWidth gsDisplayBloc=
+k gsAlignCenter sp_html_block" 
+                      style=3D'color: rgb(24, 106, 222); font-family: Arial=
+ , "sans-serif" , "Basis"; font-size: 11px;'><a style=3D"color: rgb(24, 106=
+, 222); font-weight: bold; text-decoration: none;" href=3D"https://tracking=
+.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41c4" target=3D"_blank" rel=3D"noo=
+pener noreferrer">GS.com&nbsp;</A> | &nbsp;<a style=3D"color: rgb(24, 106, =
+222); font-weight: bold; text-decoration: none;" href=3D"https://tracking.g=
+s.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41c5" target=3D"_blank" rel=3D"noope=
+ner noreferrer" alias=3D"">Careers Blog</A> &nbsp;|&nbsp; <a style=3D"color=
+: rgb(24, 106, 222); font-weight: bold; text-decoration: none;" href=3D"htt=
+ps://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41c6" target=3D"_blan=
+k" rel=3D"noopener noreferrer" alias=3D"">Privacy and Security</A> &nbsp;|&=
+nbsp; <a style=3D"color: rgb(24, 106, 222); font-weight: bold; text-decorat=
+ion: none;" href=3D"https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,65=
+5e41c7" target=3D"_blank" rel=3D"noopener noreferrer" alias=3D"">Terms 
+                        of Use</A></TD>
+                      <TD align=3D"right" class=3D"gsFullWidth gsDisplayBlo=
+ck gsAlignCenter sp_html_block" 
+                      style=3D'color: rgb(24, 106, 222); font-family: Arial=
+ , "sans-serif" , "Basis"; font-size: 11px;'><a style=3D"color: rgb(24, 106=
+, 222); font-weight: bold; text-decoration: none;" href=3D"https://tracking=
+.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41c8" target=3D"_blank" rel=3D"noo=
+pener noreferrer"><IMG width=3D"22" 
+                        height=3D"22" class=3D"fr-fic fr-dii" style=3D"bord=
+er: currentColor; border-image: none; width: 22px; height: 22px;" 
+                        alt=3D"Twitter" src=3D"https://assets.storyports.co=
+m/pushproject/u/2812/images/22916521737.png"></A><a style=3D"color: rgb(24,=
+ 106, 222); font-weight: bold; text-decoration: none;" href=3D"https://trac=
+king.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41c9" target=3D"_blank" rel=3D=
+"noopener noreferrer"><IMG width=3D"22" height=3D"22" 
+                        class=3D"fr-fic fr-dii" style=3D"border: currentCol=
+or; border-image: none; width: 22px; height: 22px;" 
+                        alt=3D"Instagram" src=3D"https://assets.storyports.=
+com/pushproject/u/2812/images/80216521737.png"></A><a style=3D"color: rgb(2=
+4, 106, 222); font-weight: bold; text-decoration: none;" href=3D"https://tr=
+acking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,655e41ca" target=3D"_blank" rel=
+=3D"noopener noreferrer"><IMG width=3D"22" height=3D"22" 
+                        class=3D"fr-fic fr-dii" style=3D"border: currentCol=
+or; border-image: none; width: 22px; height: 22px;" 
+                        alt=3D"Youtube" src=3D"https://assets.storyports.co=
+m/pushproject/u/2812/images/45016521737.png"></A>&nbsp;</TD></TR></TBODY></=
+TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- ******** End=
+: Footer Links  ********* ************************************* --></DIV></=
+DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  *********
+************************************ --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV>
+      <DIV class=3D"layout_type_custom_module">
+      <DIV>
+      <DIV class=3D" type_1658890379 type_custom_module sp_text_align_cente=
+r ui-sortable-handle" 
+      data-align=3D"center" data-orientation_type_name=3D"" data-orientatio=
+n_type=3D"custom_module" 
+      data-container_width=3D"820" data-column_padding=3D"0" data-columns=
+=3D"1" 
+      data-additional_padding=3D"50"><!--  ********************************=
+********* ******** START: Spacer - 20  ************ -->
+      <TABLE width=3D"100%" class=3D"gsSpacerTable" border=3D"0" cellspacin=
+g=3D"0" 
+      cellpadding=3D"0">
+        <TBODY>
+        <TR>
+          <TD height=3D"20" align=3D"center" class=3D"gsSpacer20" style=3D"=
+height: 20px; line-height: 20px; font-size: 20px;"></TD></TR></TBODY></TABL=
+E><!-- ******** End: Spacer - 20  ********* *******************************=
+***** --></DIV></DIV></DIV></DIV></DIV></DIV></TD></TR></TBODY></TABLE></DI=
+V><style data-ignore-inlining>@media (prefers-color-scheme: dark) { #_t::be=
+fore {content:url('https://w3pdegq7.emltrk.com/v2/w3pdegq7=3Frd&i=3D[CONTAC=
+T-ID]');}} @media (prefers-color-scheme: light) { #_t::before {content:url(=
+'https://w3pdegq7.emltrk.com/v2/w3pdegq7=3Frl&i=3D[CONTACT-ID]');}} @media =
+print{ #_t {background-image:url('https://w3pdegq7.emltrk.com/v2/w3pdegq7=
+=3Fp&i=3D[CONTACT-ID]');}} div.OutlookMessageHeader {background-image:url('=
+https://w3pdegq7.emltrk.com/v2/w3pdegq7=3Ff&i=3D[CONTACT-ID]')} table.moz-e=
+mail-headers-table {background-image:url('https://w3pdegq7.emltrk.com/v2/w3=
+pdegq7=3Ff&i=3D[CONTACT-ID]')} blockquote #_t {background-image:url('https:=
+//w3pdegq7.emltrk.com/v2/w3pdegq7=3Ff&i=3D[CONTACT-ID]')} #MailContainerBod=
+y #_t {background-image:url('https://w3pdegq7.emltrk.com/v2/w3pdegq7=3Ff&i=
+=3D[CONTACT-ID]')}</style><div id=3D"_t"></div>
+<img src=3D"https://w3pdegq7.emltrk.com/v2/w3pdegq7=3Fi=3D[CONTACT-ID]" wid=
+th=3D"1" height=3D"1" border=3D"0" alt=3D"" /><img height=3D'0' width=3D'0'=
+ alt=3D'' src=3D'https://tracking.gs.com/r/=3Fid=3Dh1f2e3e94,70fc1720,1'/><=
+/BODY></HTML>
+
+------=_NextPart_588_2055CD10.2055CD10--
+
